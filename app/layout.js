@@ -1,52 +1,10 @@
-import localFont from "next/font/local";
+import { Inter } from 'next/font/google'
 import "./globals.css";
 import MainHeader from "./components/MainHeader";
 import Footer from "./components/Footer";
 
-const poppins = localFont({
-    src: [
-        {
-            path: "./fonts/FZ Poppins-Regular.ttf",
-            weight: "400",
-            style: "normal",
-        },
-        {
-            path: "./fonts/FZ Poppins-Italic.ttf",
-            weight: "400",
-            style: "italic",
-        },
-        {
-            path: "./fonts/FZ Poppins-Medium.ttf",
-            weight: "500",
-            style: "normal",
-        },
-        {
-            path: "./fonts/FZ Poppins-MediumItalic.ttf",
-            weight: "500",
-            style: "italic",
-        },
-        {
-            path: "./fonts/FZ Poppins-SemiBold.ttf",
-            weight: "600",
-            style: "normal",
-        },
-        {
-            path: "./fonts/FZ Poppins-SemiBoldItalic.ttf",
-            weight: "600",
-            style: "italic",
-        },
-        {
-            path: "./fonts/FZ Poppins-Bold.ttf",
-            weight: "700",
-            style: "normal",
-        },
-        {
-            path: "./fonts/FZ Poppins-BoldItalic.ttf",
-            weight: "700",
-            style: "italic",
-        },
-    ],
-});
+
+const inter = Inter({ subsets: ['vietnamese'] })
 
 export const metadata = {
     title: "Vagabond",
@@ -56,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`${poppins.className}`}>
+            <body className={`${inter.className}`}>
                 <MainHeader></MainHeader>
                 <div className="flex-1">{children}</div>
                 <Footer></Footer>
