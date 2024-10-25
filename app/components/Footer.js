@@ -12,7 +12,7 @@ export default function Footer() {
                             vagabond
                         </span>
                     </div>
-                    <div className="flex gap-6 items-center mt-7">
+                    <div className="flex gap-6 items-center mt-7 mb-12">
                         <div>
                             <Image
                                 src="/img/footer/certificate-2.webp"
@@ -95,9 +95,9 @@ export default function Footer() {
         </footer>
     );
 
-    function FooterColumn({ title, children, variant }) {
+    function FooterColumn({ title, children}) {
         return (
-            <div className={`${variant}`}>
+            <div>
                 <h4 className="font-bold text-white text-base">{title}</h4>
                 {children}
             </div>

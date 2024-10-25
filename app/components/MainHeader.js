@@ -1,23 +1,22 @@
 import Link from "next/link";
 import { BsSearch } from "react-icons/bs";
+
+import Navbar from "./Navbar";
+import SearchBar from "./SearchBar";
 export default function MainHeader() {
     return (
-        <header className="border-b top-0 sticky bg-white">
-            <div className="container mx-auto flex items-center p-3">
-                <div className="flex items-center">
-                    <h1 className="ml-2 font-bold text-xl">vagabond</h1>
-                </div>
-
-                <div className="w-[360px] mx-4 flex items-center gap-1 rounded-full px-4 h-10 border">
-                    <button>
-                        <BsSearch></BsSearch>
-                    </button>
-                    <input
-                        type="text"
-                        placeholder="Tìm theo điểm đến, hoạt động"
-                        className="flex-1 h-full px-1 outline-none border-none bg-transparent"
-                    />
-                </div>
+        <header className="top-0 sticky bg-white border-b">
+            <div className="container mx-auto flex items-center py-3">
+                <Link href="/">
+                    <div className="flex items-center">
+                        <h1 className="ml-2 font-bold text-xl">vagabond</h1>
+                    </div>
+                </Link>
+                <SearchBar
+                    className="w-[360px] mx-4 rounded-full px-4 h-10 border"
+                    Icon={<BsSearch className="w-[18px] h-[18px]"></BsSearch>}
+                    placeholder="Tìm theo điểm đến, hoạt động"
+                ></SearchBar>
 
                 <nav className="flex space-x-4 items-center ml-auto font-semibold">
                     <button href="/" className="hover:text-blue-500">
@@ -31,6 +30,12 @@ export default function MainHeader() {
                         Đăng nhập
                     </button>
                 </nav>
+            </div>
+            <div className="w-full h-[1px] bg-gray-200"></div>
+            <div className="bg-white">
+                <div className="container mx-auto py-2">
+                    <Navbar></Navbar>
+                </div>
             </div>
         </header>
     );

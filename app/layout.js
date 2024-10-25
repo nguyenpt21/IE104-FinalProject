@@ -1,10 +1,9 @@
-import { Inter } from 'next/font/google'
+import { Inter } from "next/font/google";
 import "./globals.css";
 import MainHeader from "./components/MainHeader";
 import Footer from "./components/Footer";
 
-
-const inter = Inter({ subsets: ['vietnamese'] })
+const inter = Inter({ subsets: ["vietnamese"] });
 
 export const metadata = {
     title: "Vagabond",
@@ -16,7 +15,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={`${inter.className}`}>
                 <MainHeader></MainHeader>
-                <div className="flex-1">{children}</div>
+                {children}
                 <Footer></Footer>
             </body>
         </html>
