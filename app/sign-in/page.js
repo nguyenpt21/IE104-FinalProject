@@ -5,11 +5,11 @@ export default function SignIn() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="bg-white rounded-lg shadow-lg w-full max-w-4xl flex overflow-hidden">
-        {/* Right Section - Moving this first to match the image */}
+        {/* Right Section */}
         <div className="w-1/2 p-12">
           <h2 className="text-3xl font-bold mb-8 text-center">Đăng nhập</h2>
           
-          {/* Social Login - Updated styling */}
+          {/* Social Login */}
           <div className="flex justify-center gap-4 mb-8">
             <button className="p-2 border rounded-full hover:bg-gray-50 transition duration-300 ease-in-out transform hover:scale-110">
               <FaFacebook className="w-5 h-5 text-blue-600" />
@@ -22,7 +22,7 @@ export default function SignIn() {
             </button>
           </div>
           
-          {/* Divider with text - Updated with shorter lines */}
+          {/* Divider with text */}
           <div className="flex items-center justify-center mb-8">
             <div className="w-24 border-t border-gray-300"></div>
             <span className="mx-4 text-gray-500">Hoặc</span>
@@ -57,7 +57,7 @@ export default function SignIn() {
           </form>
         </div>
 
-        {/* Left Section - Updated to gray background */}
+        {/* Left Section */}
         <div className="w-1/2 bg-gray-300 p-12 flex flex-col justify-center items-center text-center">
           <h2 className="text-3xl font-bold mb-4">Xin chào!</h2>
           <p className="text-gray-700 mb-6">
