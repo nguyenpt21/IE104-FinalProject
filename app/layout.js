@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import MainHeader from "./components/MainHeader";
-import Footer from "./components/Footer";
+import MainHeader from "./components/layout/MainHeader";
+import Footer from "./components/layout/Footer";
 
 const inter = Inter({ subsets: ["vietnamese"] });
 

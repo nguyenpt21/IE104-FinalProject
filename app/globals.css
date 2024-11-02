@@ -24,10 +24,18 @@ body {
     .text-balance {
         text-wrap: balance;
     }
+
+    .carousel-item {
+        padding: 8px 8px;
+        transition: transform 0.2s;
+    }
+
+    .carousel-item:hover {
+        transform: translateY(-6px);
+    }
 }
 
 @layer base {
-
     body {
         box-sizing: border-box;
         font-size: 14px;

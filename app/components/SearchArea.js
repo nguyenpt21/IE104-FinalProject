@@ -18,10 +18,10 @@ export default function SearchArea() {
     ];
 
     return (
-        <div className="w-[940px] px-10 py-6 bg-white shadow-custom mx-auto mt-10 rounded-xl">
+        <div className="w-[940px] px-10 py-6 bg-white shadow-custom mx-auto mt-12 rounded-xl">
             <SearchBar
                 placeholder="Bạn có ý tưởng gì cho chuyến đi không?"
-                className="border rounded-lg h-14 pl-4 pr-1 text-lg"
+                className="border rounded-lg h-14 pl-4 pr-1 text-lg hover:border-blue-400"
                 Icon={<BsSearch className="text-gray-400 w-5 h-5"></BsSearch>}
                 Button={
                     <button className="px-10 py-2 text-lg bg-blue-700 text-white rounded-lg">

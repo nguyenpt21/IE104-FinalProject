@@ -2,10 +2,10 @@ import Link from "next/link";
 import { BsSearch } from "react-icons/bs";
 
 import Navbar from "./Navbar";
-import SearchBar from "./SearchBar";
+import SearchBar from "../SearchBar";
 export default function MainHeader() {
     return (
-        <header className="top-0 sticky bg-white border-b">
+        <header className="top-0 sticky bg-white border-b z-50">
             <div className="container mx-auto flex items-center py-3">
                 <Link href="/">
                     <div className="flex items-center">

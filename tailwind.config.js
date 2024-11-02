@@ -23,6 +23,9 @@ module.exports = {
             boxShadow: {
                 custom: "0 5px 15px rgba(0, 0, 0, 0.25) ",
             },
+            transitionDuration: {
+                2000: "2000ms",
+            },
         },
     },
     plugins: [],
