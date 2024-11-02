@@ -3,7 +3,9 @@ import { BsSearch } from "react-icons/bs";
 
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
+
 export default function MainHeader() {
+
     return (
         <header className="top-0 sticky bg-white border-b">
             <div className="container mx-auto flex items-center py-3">
@@ -22,12 +24,12 @@ export default function MainHeader() {
                     <button href="/" className="hover:text-blue-500">
                         Xem gần đây
                     </button>
-                    <Link href="/sign-in" className="hover:text-blue-500">
+                    <Link href="/sign-up" className="hover:text-blue-500">
                         Đăng ký
                     </Link>
 
                     <button className="bg-blue-500 text-white rounded-full px-4 py-2 hover:bg-blue-600">
-                        Đăng nhập
+                        <Link href="/sign-in">Đăng nhập</Link>
                     </button>
                 </nav>
             </div>

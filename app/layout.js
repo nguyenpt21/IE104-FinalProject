@@ -3,6 +3,7 @@ import "./globals.css";
 import MainHeader from "./components/MainHeader";
 import Footer from "./components/Footer";
 
+
 const inter = Inter({ subsets: ["vietnamese"] });
 
 export const metadata = {
