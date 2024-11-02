@@ -14,6 +14,8 @@ module.exports = {
             },
             gridTemplateColumns: {
                 footer: "1.3fr 1fr 1fr 1fr",
+                three_col_custom: "48% 4% 48%",
+                two_col_custom: "40% 60%",
             },
             container: {
                 screens: {
