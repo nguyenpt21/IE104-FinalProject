@@ -370,6 +370,16 @@ export const DESTINATIONS_BY_CITIES = [
 
 export const NAV_LINKS = [
     {
+        title: "Đăng nhập",
+        href: "/sign-in",
+        services: []
+    },
+    {
+        title: "Đăng ký",
+        href: "/sign-up",
+        services: []
+    },
+    {
         title: "Tour và trải nghiệm",
         href: "/",
         services: [

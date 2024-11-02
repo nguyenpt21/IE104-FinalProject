@@ -11,11 +11,18 @@ export default function Navbar() {
     function NavItem({ icon, children, href, Dropdown, notLink }) {
         const [open, setOpen] = useState(false);
 
+        const handleClick = () => {
+            if (href) {
+                window.location.href = href;
+            }
+        };
+
         return (
             <div
                 className="relative"
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
+                onClick={handleClick}
             >
                 <div className="flex gap-2 items-center font-semibold px-3 py-2 rounded-full hover:bg-gray-100 cursor-pointer">
                     {icon && <GrLocation></GrLocation>}
@@ -33,6 +40,7 @@ export default function Navbar() {
             </NavItem>
 
             {NAV_LINKS.map((nav, key) => (
+
                 <NavItem
                     key={key}
                     href={nav.href}
