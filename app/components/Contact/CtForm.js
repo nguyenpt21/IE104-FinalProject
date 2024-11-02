@@ -1,7 +1,7 @@
 import React from 'react'
-import ContactInput from '@/app/components/Contact/CtInput'
-import ContactTexarea from '@/app/components/Contact/CtTextarea'
-import CtButton from '@/app/components/Contact/CtButton'
+import ContactInput from '@/app/components/contact/CtInput'
+import ContactTexarea from '@/app/components/contact/CtTextarea'
+import CtButton from '@/app/components/contact/CtButton'
 
 export default function ContactForm() {
   return (

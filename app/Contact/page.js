@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from "next/image";
-import Banner from '@/app/components/Contact/Banner';
+import Banner from '@/app/components/contact/Banner';
 import Link from 'next/link';
 import { CONTACT_INFO } from '@/constants/contact';
-import ContactItem from '@/app/components/Contact/CtItem'
-import ContactForm from '@/app/components/Contact/CtForm';
-import GetInTouch from '@/app/components/Contact/GetInTouch';
+import ContactItem from '@/app/components/contact/CtItem'
+import ContactForm from '@/app/components/contact/CtForm';
+import GetInTouch from '@/app/components/contact/GetInTouch';
 import Heading from '@/app/components/Heading';
 
 

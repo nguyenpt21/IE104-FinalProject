@@ -28,6 +28,14 @@ module.exports = {
             transitionDuration: {
                 2000: "2000ms",
             },
+            inset: {
+                '-50px': '-50px', // Định nghĩa giá trị top tùy chỉnh
+            },
+            fontSize: {
+                'tiny': '0.625rem', // Kích thước font nhỏ
+                'xxs': '0.5rem',    // Kích thước font siêu nhỏ
+                'huge': '2.5rem',   // Kích thước font lớn
+            },
         },
     },
     plugins: [],
