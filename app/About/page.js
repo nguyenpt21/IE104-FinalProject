@@ -122,7 +122,7 @@ export default function About() {
         </div>
         {/* section 3 */}
         <Heading title="Team & Founder" />
-        <div className='mx-36 m-20'>
+        <div className='mx-32 m-20'>
             <div className='grid grid-cols-3'>
                 {TEAM.map((row, key) => (
                     <div key={key}>

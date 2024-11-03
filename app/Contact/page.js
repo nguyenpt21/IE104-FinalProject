@@ -7,6 +7,7 @@ import ContactItem from '@/app/components/contact/CtItem'
 import ContactForm from '@/app/components/contact/CtForm';
 import GetInTouch from '@/app/components/contact/GetInTouch';
 import Heading from '@/app/components/Heading';
+import Accod from '@/app/components/contact/Accod';
 
 
 
@@ -40,7 +41,7 @@ export default function Contact() {
 
         {/* section 3 */}
         <Heading title="Các câu hỏi thường gặp"/>
-        
+        <Accod></Accod>
   
 
 
