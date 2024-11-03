@@ -41,10 +41,10 @@ export default function Contact() {
 
         {/* section 3 */}
         <Heading title="Các câu hỏi thường gặp"/>
-        <Accod></Accod>
-  
-
-
+        <div className='grid grid-cols-2 gap-2 mx-2'>
+          <Accod/>
+          <Accod/>
+        </div>
     </div>
   )
 }

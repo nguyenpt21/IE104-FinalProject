@@ -41,7 +41,7 @@ export const GET_IN_TOUCH = {
 export const QUESTION = [
     {
         question: "Tôi có thể huỷ đơn hàng mà mình đã đặt không?",
-        answer: "Lưu ý, hãy chắc chẵn ràng đơn hàng của bạn thuộc loạTrước khi huỷ đặt chỗ, vui lòng kiểm tra đặt chỗ của bạn có được hoàn tiền hay không.\nĐược hoàn vé  có nghĩa là bạn được hoàn dưới dạng tín dụng du lịch hoặc hoàn tiền.\nKhông hoàn có nghĩa là bạn sẽ không được hoàn lại tiền khi hủy hoặc thay đổi lịch bay.",
+        answer: "Trước khi huỷ đặt chỗ, vui lòng kiểm tra đặt chỗ của bạn có được hoàn tiền hay không.\nĐược hoàn vé có nghĩa là bạn được hoàn dưới dạng tín dụng du lịch hoặc hoàn tiền.\nKhông hoàn có nghĩa là bạn sẽ không được hoàn lại tiền khi hủy hoặc thay đổi lịch bay.\nHoàn vé một phần có nghĩa là bạn được hoàn một chuyến bay trong vé khứ hồi của bạn.",
     },
     {
         question: "Làm sao tôi có thể huỷ đơn hàng của mình?",

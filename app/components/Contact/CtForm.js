@@ -10,21 +10,24 @@ export default function ContactForm() {
             <div className='grid grid-cols-2 gap-5'>
                 <ContactInput
                     type = "text"
+                    id = "name"
                     title = "Họ và Tên"
                 ></ContactInput>
+
                 <ContactInput
                     type = "email"
+                    id = "mail"
                     title = "Email"
                 ></ContactInput>
             </div>
 
             <ContactTexarea
                 title = "Để lại lời nhắn"
+                id = "message"
             ></ContactTexarea>
 
             <CtButton
                 title = "Gửi"
-                icon = "/icons/send-01.svg"
             ></CtButton>
         </form>
     </div>
