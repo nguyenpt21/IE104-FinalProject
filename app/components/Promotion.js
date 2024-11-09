@@ -36,7 +36,7 @@ export default function Promotion() {
         <HomeSection sectionHeader={"Ưu đãi cho bạn"}>
             <GeneralCarousel responsive={responsive}>
                 {PROMOTIONS.map((promotion, index) => (
-                    <Link href={promotion.link}>
+                    <Link key={index} href={promotion.link}>
                         <div
                             key={index}
                             className="h-[195px] rounded-lg"
@@ -46,6 +46,7 @@ export default function Promotion() {
                                 width={390}
                                 height={195}
                                 className="rounded-lg w-full h-full object-cover"
+                                alt="promotion"
                             ></Image>
                         </div>
                     </Link>

@@ -14,11 +14,19 @@ module.exports = {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 primary: "#27B5FC",
+                secondary: "#9ca3af",
+                orangee: "#FF7E1B",
+                orange_primary: "#FC9D26",
+                primary_bold: "#262DFC"
+
             },
             gridTemplateColumns: {
                 footer: "1.3fr 1fr 1fr 1fr",
                 three_col_custom: "48% 4% 48%",
                 two_col_custom: "40% 60%",
+                two_col_custom_2: "22% auto",
+
+                search_flight: "29% 29% 28% 12%"
             },
             container: {
                 screens: {

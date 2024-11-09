@@ -1,5 +1,4 @@
 
-
 export default function SearchBar({className, Icon, placeholder, Button }) {
 
     return (

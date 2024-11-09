@@ -7,6 +7,7 @@ import { IoIosStar } from "react-icons/io";
 import HomeSection from "./HomeSection";
 import GeneralCarousel from "./GeneralCarousel";
 import { ACTIVITY_CARD_LIST } from "@/constants";
+import SectionButton from "./SectionButton";
 
 export default function ActivityCardList() {
     const responsive = {
@@ -36,24 +37,25 @@ export default function ActivityCardList() {
     function ActivityCard({ card }) {
         return (
             <Link href="/">
-                <div className="rounded-xl border h-[380px] flex flex-col shadow-md">
-                    <div className="h-[200px] rounded-t-xl relative">
+                <div className="rounded-xl border h-[380px] flex flex-col shadow-md overflow-hidden">
+                    <div className="h-[200px] relative ">
                         <Image
                             src={card.img}
                             width={280}
                             height={182}
                             className="w-full h-full object-cover rounded-t-xl"
+                            alt={card.title}
                         ></Image>
                         {Object.keys(card.discount).length > 0 && (
                             <div className="absolute top-0 left-0 ">
-                                <div className="inline-flex overflow-hidden rounded-tl-xl text-xs font-semibold h-full">
+                                <div className="inline-flex overflow-hidden text-xs font-semibold h-full">
                                     <span className="px-2 py-1 m-0 bg-white ">
                                         {card.discount.type}
                                     </span>
-                                    <span className="bg-orange-500 h-full m-0 px-2 py-1 text-white">
+                                    <span className="bg-orange_primary h-full m-0 px-2 py-1 text-white">
                                         {card.discount.how}
                                     </span>
-                                    <div className="border-x-[12px] border-y-[12px] border-y-orange-500 border-l-orange-500 border-r-transparent"></div>
+                                    <div className="border-x-[12px] border-y-[12px] border-y-orange_primary border-l-orange_primary border-r-transparent"></div>
                                 </div>
                             </div>
                         )}
@@ -85,7 +87,7 @@ export default function ActivityCardList() {
                             </div>
                             - <span>{card.bookings}</span>
                         </div>
-                        <p className="mt-auto text-lg font-semibold text-orange-500">
+                        <p className="mt-auto text-lg font-semibold text-orange_primary">
                             {card.price}
                         </p>
                     </div>
@@ -93,14 +95,16 @@ export default function ActivityCardList() {
             </Link>
         );
     }
+
     return (
         <HomeSection
             sectionHeader={"Các hoạt động hàng đầu"}
             icon={
                 <Image
                     src="/icons/activity.webp"
-                    width={24}
-                    height={24}
+                    width={28}
+                    height={28}
+                    alt=""
                 ></Image>
             }
         >
@@ -109,6 +113,9 @@ export default function ActivityCardList() {
                     <ActivityCard card={card} key={key}></ActivityCard>
                 ))}
             </GeneralCarousel>
+            <div className="text-center mt-6">
+                <SectionButton href={"/"} text="Xem tất cả"></SectionButton>
+            </div>
         </HomeSection>
     );
 }

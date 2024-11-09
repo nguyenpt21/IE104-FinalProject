@@ -6,6 +6,7 @@ import Promotion from "./components/Promotion";
 import ActivityCardList from "./components/ActivityCardList";
 import HotelCardList from "./components/HotelCardList";
 import DestionationList from "./components/DestinationList";
+import AirlineList from "./components/AirlineList";
 
 export default function Home() {
     
@@ -17,6 +18,7 @@ export default function Home() {
             <ActivityCardList></ActivityCardList> 
             <HotelCardList></HotelCardList>
             <DestionationList></DestionationList>
+            <AirlineList></AirlineList>
             <div className="mt-20"></div>
         </>
     );

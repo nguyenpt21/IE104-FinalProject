@@ -7,6 +7,7 @@ import { FaStar } from "react-icons/fa6";
 import HomeSection from "./HomeSection";
 import GeneralCarousel from "./GeneralCarousel";
 import { HOTEL_CARD_LIST } from "@/constants";
+import SectionButton from "./SectionButton";
 
 export default function HotelCardList() {
     const responsive = {
@@ -34,11 +35,14 @@ export default function HotelCardList() {
     };
 
     function HotelCard({ card }) {
-        const oldPrice = parseInt(card.oldPrice.replace(".", ""));
-        const newPrice = parseInt(card.newPrice.replace(".", ""));
+        const oldPrice = parseInt(card.oldPrice.replace(/\./g, ""));
+        const newPrice = parseInt(card.newPrice.replace(/\./g, ""));
+        console.log(oldPrice, newPrice)
         const discountPercentage = Math.round(
             ((oldPrice - newPrice) / oldPrice) * 100
         );
+
+        console.log(discountPercentage)
 
         return (
             <Link href="/">
@@ -49,12 +53,13 @@ export default function HotelCardList() {
                             width={280}
                             height={182}
                             className="w-full h-full object-cover rounded-t-xl"
+                            alt={card.title}
                         ></Image>
                         <div className="absolute left-0 bottom-5 flex">
-                            <div className="pr-1 py-1 pl-2 text-xs text-white bg-orange-500 font-semibold">
+                            <div className="pr-1 py-1 pl-2 text-xs text-white bg-orange_primary font-semibold">
                                 Tiết kiệm {discountPercentage} %
                             </div>
-                            <div className="border-x-[12px] border-y-[12px] border-y-orange-500 border-l-orange-500 border-r-transparent"></div>
+                            <div className="border-x-[12px] border-y-[12px] border-y-orange_primary border-l-orange_primary border-r-transparent"></div>
                         </div>
                     </div>
                     <div className="px-4 py-2 flex flex-col flex-1">
@@ -96,7 +101,7 @@ export default function HotelCardList() {
         <HomeSection
             sectionHeader={"Đa dạng sự lựa chọn khách sạn"}
             icon={
-                <Image src={"/icons/hotel.webp"} width={24} height={24}></Image>
+                <Image src={"/icons/hotel.webp"} width={28} height={28} alt="hotel-icon"></Image>
             }
         >
             <GeneralCarousel responsive={responsive}>
@@ -104,6 +109,9 @@ export default function HotelCardList() {
                     <HotelCard card={card} key={key}></HotelCard>
                 ))}
             </GeneralCarousel>
+            <div className="text-center mt-6">
+                <SectionButton href={"/"} text="Đặt khách sạn ngay"></SectionButton>
+            </div>
         </HomeSection>
     );
 }
