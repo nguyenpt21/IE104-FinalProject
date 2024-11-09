@@ -399,7 +399,7 @@ export const NAV_LINKS = [
     },
     {
         title: "Khách sạn",
-        href: "/",
+        href: "/hotel",
         services: [],
     },
     {
