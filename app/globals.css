@@ -33,6 +33,20 @@ body {
     .carousel-item:hover {
         transform: translateY(-6px);
     }
+
+    .bg-hero-tour {
+        background-image: url("/img/tour/hero_background.jpg");
+    }
+
+    .translate-y {
+        transition: transform;
+        transition-duration: 0.2s;
+    }
+
+    .translate-y:hover {
+        transform: translateY(-6px);
+    }
+
 }
 
 @layer base {

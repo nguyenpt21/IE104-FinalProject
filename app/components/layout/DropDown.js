@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Dropdown({ data }) {
     return (
-        <div className="absolute pt-2 ">
+        <div className="absolute pt-1">
             <div className="py-2 bg-white z-10 rounded-xl shadow-lg">
                 <ul>
                     {data.map((service, key) => (

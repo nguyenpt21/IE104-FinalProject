@@ -11,6 +11,8 @@ module.exports = {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 primary: "#27B5FC",
+                orange_primary: "#FC9D26",
+                primary_bold: "#262DFC"
             },
             gridTemplateColumns: {
                 footer: "1.3fr 1fr 1fr 1fr",

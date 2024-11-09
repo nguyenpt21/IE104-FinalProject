@@ -24,12 +24,12 @@ export default function SearchDropdown() {
     const [hoveredIndex, setHoveredIndex] = useState(TOP_DESTINATIONS.id);
 
     return (
-        <div className="absolute pt-2">
+        <div className="absolute pt-1">
             <div className="min-h-[406px] w-[860px] bg-white rounded-xl relative overflow-hidden border border-blue-500 shadow">
                 <div className="w-[230px]">
-                    <ul className="border-r">
+                    <ul className="border-r ">
                         <li
-                            className={`cursor-pointer rounded-tl-xl ${
+                            className={`cursor-pointer ${
                                 hoveredIndex === TOP_DESTINATIONS.id
                                     ? "bg-blue-400 text-white"
                                     : ""
@@ -61,8 +61,8 @@ export default function SearchDropdown() {
                                                                 height={74}
                                                                 className="rounded-md object-cover w-full"
                                                             ></Image>
-                                                            <div class="absolute bottom-0 w-full font-normal bg-gradient-to-t from-[#2f2f2f] to-transparent text-white p-1">
-                                                                <p class="text-sm text-center">
+                                                            <div className="absolute bottom-0 w-full font-normal bg-gradient-to-t from-[#2f2f2f] to-transparent text-white p-1">
+                                                                <p className="text-sm text-center">
                                                                     {
                                                                         destination.label
                                                                     }

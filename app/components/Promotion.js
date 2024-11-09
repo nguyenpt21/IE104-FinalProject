@@ -46,6 +46,7 @@ export default function Promotion() {
                                 width={390}
                                 height={195}
                                 className="rounded-lg w-full h-full object-cover"
+                                alt="promotion"
                             ></Image>
                         </div>
                     </Link>

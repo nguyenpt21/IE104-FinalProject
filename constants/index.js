@@ -27,7 +27,7 @@ export const FOOTER_LINKS = [
             "Vé máy bay",
             "Đưa đón sân bay",
             "Vé xe khách",
-            "Tua",
+            "Tour",
             "Du thuyền",
             "Massage & Suối nước nóng",
         ],
@@ -371,7 +371,7 @@ export const DESTINATIONS_BY_CITIES = [
 export const NAV_LINKS = [
     {
         title: "Tour và trải nghiệm",
-        href: "/",
+        href: "/tour",
         services: [
             "Du thuyền",
             "Massage & Suối nước nóng",
@@ -589,7 +589,7 @@ export const HOTEL_CARD_LIST = [
         rating: '4.3',
         review: 'Rất tốt',
         numReview: '172',
-        oldPrice: '1.600.000 VND',
+        oldPrice: '1.000.000 VND',
         newPrice: '634.889 VND',
     },
     {
@@ -640,4 +640,23 @@ export const DESTINATIONS_LIST = [
         country: 'Pháp',
         city: 'Paris'
     }
+]
+
+export const AIRLINE_LIST = [
+    {
+        img: '/img/airline/airline-1.webp',
+        name: 'vietjet'
+    },
+    {
+        img: '/img/airline/airline-2.webp',
+        name: 'bamboo'
+    },
+    {
+        img: '/img/airline/airline-3.webp',
+        name: 'vietnam airline'
+    },
+    {
+        img: '/img/airline/airline-4.webp',
+        name: 'vietravel'
+    },
 ]
