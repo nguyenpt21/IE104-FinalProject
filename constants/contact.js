@@ -36,3 +36,19 @@ export const GET_IN_TOUCH = {
         "/img/about/member.png"
     ]
 }
+
+
+export const QUESTION = [
+    {
+        question: "Tôi có thể huỷ đơn hàng mà mình đã đặt không?",
+        answer: "Trước khi huỷ đặt chỗ, vui lòng kiểm tra đặt chỗ của bạn có được hoàn tiền hay không.\nĐược hoàn vé có nghĩa là bạn được hoàn dưới dạng tín dụng du lịch hoặc hoàn tiền.\nKhông hoàn có nghĩa là bạn sẽ không được hoàn lại tiền khi hủy hoặc thay đổi lịch bay.\nHoàn vé một phần có nghĩa là bạn được hoàn một chuyến bay trong vé khứ hồi của bạn.",
+    },
+    {
+        question: "Làm sao tôi có thể huỷ đơn hàng của mình?",
+        answer: "Để huỷ vé và gửi yêu cầu hoàn tiền, vui lòng làm theo các bước đơn giản sau:\nĐăng nhập vào tài khoản Traveloka, đến phần Đặt chỗ của tôi.\nChọn đặt chỗ bạn muốn huỷ.\nChọn Quản lý đặt chỗ, sau đó chọn Hoàn tiền.",
+    },
+    {
+        question: "Làm thế nào để báo cáo sự cố hoặc khiếu nại?",
+        answer: "Nếu bạn gặp phải sự cố trong quá trình sử dụng dịch vụ hoặc có bất kỳ khiếu nại nào liên quan đến đơn hàng của mình, bạn có thể báo cáo sự cố qua email tới địa chỉ hỗ trợ khách hàng của chúng tôi. Vui lòng cung cấp chi tiết về vấn đề bạn gặp phải, bao gồm thông tin đặt chỗ và bất kỳ tài liệu liên quan nào, để chúng tôi có thể xử lý nhanh chóng và chính xác",
+    },
+]

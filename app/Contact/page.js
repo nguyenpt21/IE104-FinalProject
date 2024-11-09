@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 import Banner from "@/app/components/contact/Banner";
 import Link from "next/link";
 import { CONTACT_INFO } from "@/constants/contact";
@@ -7,6 +8,7 @@ import ContactItem from "@/app/components/contact/CtItem";
 import ContactForm from "@/app/components/contact/CtForm";
 import GetInTouch from "@/app/components/contact/GetInTouch";
 import Heading from "@/app/components/Heading";
+import Accod from "@/app/components/contact/Accod";
 
 export default function Contact() {
     return (
@@ -38,6 +40,10 @@ export default function Contact() {
 
             {/* section 3 */}
             <Heading title="Các câu hỏi thường gặp" />
+            <div className="grid grid-cols-2 gap-2 mx-2">
+                <Accod />
+                <Accod />
+            </div>
         </div>
     );
 }
