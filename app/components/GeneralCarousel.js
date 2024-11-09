@@ -27,7 +27,6 @@ export default function GeneralCarousel({ responsive, children }) {
         <div className="-mx-2">
             <Carousel
                 swipeable={false}
-
                 responsive={responsive}
                 itemClass="carousel-item"
                 customRightArrow={<CustomRight></CustomRight>}

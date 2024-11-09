@@ -404,7 +404,7 @@ export const NAV_LINKS = [
     },
     {
         title: "Vé máy bay",
-        href: "/",
+        href: "/flight",
         services: ["Một chiều / Khứ hồi", "Nhiều thành phố"],
     },
     {
