@@ -409,12 +409,12 @@ export const NAV_LINKS = [
     },
     {
         title: "Về chúng tôi",
-        href: "/",
+        href: "/about",
         services: [],
     },
     {
         title: "Liên hệ",
-        href: "/",
+        href: "/contact",
         services: [],
     },
 ];

@@ -1,9 +1,12 @@
+const {nextui} = require("@nextui-org/react");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
+        "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         extend: {
@@ -14,6 +17,8 @@ module.exports = {
             },
             gridTemplateColumns: {
                 footer: "1.3fr 1fr 1fr 1fr",
+                three_col_custom: "48% 4% 48%",
+                two_col_custom: "40% 60%",
             },
             container: {
                 screens: {
@@ -25,6 +30,17 @@ module.exports = {
             },
             transitionDuration: {
                 2000: "2000ms",
+            },
+            inset: {
+                '-50px': '-50px', // Định nghĩa giá trị top tùy chỉnh
+            },
+            fontSize: {
+                'tiny': '0.625rem', // Kích thước font nhỏ
+                'xxs': '0.5rem',    // Kích thước font siêu nhỏ
+                'huge': '2.5rem',   // Kích thước font lớn
+            },
+            whiteSpace: {
+                'pre-line': 'pre-line',
             },
         },
     },
