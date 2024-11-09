@@ -9,7 +9,7 @@ export default function MainHeader() {
 
     return (
         <header className="top-0 sticky bg-white border-b z-50">
-            <div className="container mx-auto flex items-center py-3">
+            <div className="container mx-auto flex items-center py-2">
                 <Link href="/">
                     <div className="flex items-center">
                         <h1 className="ml-2 font-bold text-xl">vagabond</h1>
@@ -22,21 +22,21 @@ export default function MainHeader() {
                 ></SearchBar>
 
                 <nav className="flex space-x-4 items-center ml-auto font-semibold">
-                    <button href="/" className="hover:text-blue-500">
+                    <button href="/" className="hover:text-primary transition-colors">
                         Xem gần đây
                     </button>
-                    <Link href="/sign-up" className="hover:text-blue-500">
+                    <Link href="/sign-up" className="hover:text-primary transition-colors">
                         Đăng ký
                     </Link>
 
-                    <button className="bg-blue-500 text-white rounded-full px-4 py-2 hover:bg-blue-600">
+                    <button className="bg-primary text-white rounded-full px-4 py-2 hover:bg-primary">
                         <Link href="/sign-in">Đăng nhập</Link>
                     </button>
                 </nav>
             </div>
             <div className="w-full h-[1px] bg-gray-200"></div>
             <div className="bg-white">
-                <div className="container mx-auto py-2">
+                <div className="container mx-auto py-1">
                     <Navbar></Navbar>
                 </div>
             </div>

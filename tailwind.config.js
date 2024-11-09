@@ -16,6 +16,9 @@ module.exports = {
                 primary: "#27B5FC",
                 secondary: "#9ca3af",
                 orangee: "#FF7E1B",
+                orange_primary: "#FC9D26",
+                primary_bold: "#262DFC"
+
             },
             gridTemplateColumns: {
                 footer: "1.3fr 1fr 1fr 1fr",
