@@ -41,6 +41,7 @@ export default function About() {
                                             src={row.img}
                                             height={30}
                                             width={30}
+                                            alt = ''
                                         />
                                     </div>
 
