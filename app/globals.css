@@ -20,6 +20,60 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Date range picker*/
+.custom-date-range-picker .rdrMonthAndYearWrapper {
+    padding-top: 0;
+}
+.custom-date-range-picker .rdrMonthAndYearPickers select {
+    color: #333; /* Màu sắc cho chữ */
+    background-color: white;
+}
+
+.custom-date-range-picker .rdrMonthName {
+    font-size: 16px;
+    color: #27b5fc; /* Màu cam cho tên tháng */
+    font-weight: bold;
+    padding: 0 4px;
+}
+
+.custom-date-range-picker .rdrWeekDay {
+    color: #666; 
+    font-weight: 600;
+}
+
+.custom-date-range-picker .rdrDayNumber span {
+    color: #333; 
+    font-size: 14px;
+}
+
+.custom-date-range-picker .rdrDayNumber span:hover {
+    color: #27b5fc; 
+}
+
+
+/* Slider */
+.custom-slider {
+    height: 4px;
+    background-color: #27b5fc; 
+}
+
+.custom-slider .track {
+    background: #27b5fc; 
+    height: 4px;
+    border-radius: 4px;
+}
+
+.custom-slider .thumb {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 2px solid #27b5fc;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -8px;
+    outline: none;
+}
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;
@@ -46,7 +100,6 @@ body {
     .translate-y:hover {
         transform: translateY(-6px);
     }
-
 }
 
 @layer base {
