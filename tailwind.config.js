@@ -25,8 +25,8 @@ module.exports = {
                 three_col_custom: "48% 4% 48%",
                 two_col_custom: "40% 60%",
                 two_col_custom_2: "22% auto",
-
-                search_flight: "29% 29% 28% 12%"
+                two_col_custom_3: "30% auto",
+                search_flight: "29% 29% 28% 12%",
             },
             container: {
                 screens: {

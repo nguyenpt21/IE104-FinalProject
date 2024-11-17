@@ -8,9 +8,9 @@ import { PiStarFourLight } from "react-icons/pi";
 export default function Accod() {
   const itemClasses = {
     base: "w-full",
-    title: "font-medium text-xl px-4 py-2 data-[open=true]:text-primary",
-    trigger: "flex items-center justify-between",
-    indicator: "text-3xl mr-4 data-[open=true]:text-primary",
+    title: "font-medium text-xl px-4 py-2 data-[open=true]:text-primary group-hover:text-primary",
+    trigger: "flex items-center justify-between ",
+    indicator: "text-3xl mr-4 data-[open=true]:text-primary group-hover:text-primary",
     content: "text-base p-4 mx-4 mb-4 bg-blue-50 text-gray-500 rounded-md",
   };
   return (
@@ -26,6 +26,7 @@ export default function Accod() {
                 key={key}
                 title={row.question}
                 indicator = {({ isOpen }) => (isOpen ? <PiStarFourLight className='rotate-45'/> : <PiStarFourLight/>)}
+                className='group'
               >
                 {row.answer}
               </AccordionItem>

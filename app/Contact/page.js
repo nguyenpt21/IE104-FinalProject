@@ -13,8 +13,10 @@ import Accod from "@/app/components/contact/Accod";
 export default function Contact() {
     return (
         <div className="">
+            {/* Banner */}
             <Banner />
-            {/* section 1 */}
+
+            {/* Thông tin liên hệ */}
             <div className="mx-36 my-5">
                 <div className="grid grid-cols-3">
                     {CONTACT_INFO.map((row, key) => (
@@ -30,7 +32,7 @@ export default function Contact() {
                 </div>
             </div>
 
-            {/* section 2 */}
+            {/* Form liên hệ */}
             <div className="mx-28 my-10">
                 <div className="grid grid-cols-two_col_custom">
                     <GetInTouch></GetInTouch>
@@ -38,9 +40,9 @@ export default function Contact() {
                 </div>
             </div>
 
-            {/* section 3 */}
+            {/* Câu hỏi thường gặp */}
             <Heading title="Các câu hỏi thường gặp" />
-            <div className="grid grid-cols-2 gap-2 mx-2">
+            <div className="grid grid-cols-2 gap-2 mx-10">
                 <Accod />
                 <Accod />
             </div>

@@ -29,6 +29,7 @@ export default function ContactForm() {
 
             <CtButton
                 title = "Gửi"
+                hr = "/"
             ></CtButton>
         </form>
     </div>
