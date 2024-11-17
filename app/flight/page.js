@@ -4,9 +4,10 @@ import Image from 'next/image'
 import SearchFlight from '@/app/components/flight/SearchFlight'
 import PromotionCard from '@/app/components/flight/Promo'
 import GeneralCarousel from "@/app/components/GeneralCarousel"
-import { PROMO_FLIGHT_CODE } from '@/constants/flight'
+import { FLIGHT_POPULAR, PROMO_FLIGHT_CODE } from '@/constants/flight'
 import WhyChooseItem from '@/app/components/flight/WhyChooseItem';
 import { WHY_CHOOSE_FLIGHT } from '@/constants/flight'
+import FlightItem from '@/app/components/flight/FlightItem';
 
 export default function Flight() {
   const responsive = {
@@ -20,6 +21,7 @@ export default function Flight() {
   }
   return (
     <div>
+
       {/* search flight */}
       <div className='relative h-[400px]'>
         <Image
@@ -33,10 +35,11 @@ export default function Flight() {
           <p>Vé máy bay</p>
         </div>
 
-        <div className='absolute top-[60%] left-[10%] w-[80%]'>
+        <div className='absolute top-[60%] left-[10%] w-[80%] py-7 bg-white rounded-xl shadow-custom'>
           <SearchFlight/>
         </div>
       </div>
+
       {/* why choose */}
       <div className='grid grid-cols-4 gap-2 mx-36'>
         {WHY_CHOOSE_FLIGHT.map((col, key) => (
@@ -70,7 +73,28 @@ export default function Flight() {
             ))}
           </GeneralCarousel>
         </div>
+
       </div>
+
+      {/* popular flight */}
+      <div className='mx-36 my-7'>
+        <div className='text-2xl font-semibold  mb-6'>
+          <p>Các tuyến phổ biến</p>
+        </div>
+        <div className='grid grid-cols-4 gap-5'>
+          {FLIGHT_POPULAR.map((item, key) => (
+              <div key={key}>
+                <FlightItem
+                  title = {item.title}
+                  time = {item.time}
+                  money = {item.money}
+                />
+              </div>
+          ))}
+        </div>
+      </div>
+      
+
       
 
 

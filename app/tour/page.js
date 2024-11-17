@@ -20,8 +20,7 @@ export default function Tour() {
         <>
             {/* Hero */}
             <div
-                className="bg-[url('/img/tour/hero_background.jpg')] bg-center bg-no-repeat h-[500px] relative"
-                style={{ backgroundSize: "1400px 500px" }}
+                className="bg-[url('/img/tour/hero_background.jpg')] bg-center bg-no-repeat h-[500px] relative bg-cover"
             >
                 <div className="container mx-auto py-10 ">
                     <h2 className="text-white text-[60px] font-semibold">
@@ -125,9 +124,9 @@ export default function Tour() {
                         }
                     ></TourList>
                 </div>
-                <div className="text-center mt-6" >
+                <div className="text-center mt-6 mb-20" >
                     <Link
-                        href="/"
+                        href="/tour-list"
                         className="inline-flex gap-2 items-center px-12 py-2 border border-gray-500 rounded-md"
                     >
                         <TiThSmall className="h-5 w-5 text-primary"></TiThSmall>
@@ -139,7 +138,6 @@ export default function Tour() {
                 </div>
             </div>
 
-            <div className="mt-20"></div>
         </>
     );
 }

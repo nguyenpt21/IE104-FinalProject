@@ -17,7 +17,8 @@ module.exports = {
                 secondary: "#9ca3af",
                 orangee: "#FF7E1B",
                 orange_primary: "#FC9D26",
-                primary_bold: "#262DFC"
+                primary_bold: "#262DFC",
+                blue_medium: '#27b5fc'
 
             },
             gridTemplateColumns: {
@@ -25,8 +26,8 @@ module.exports = {
                 three_col_custom: "48% 4% 48%",
                 two_col_custom: "40% 60%",
                 two_col_custom_2: "22% auto",
-
-                search_flight: "29% 29% 28% 12%"
+                two_col_custom_3: "30% auto",
+                search_flight: "29% 29% 28% 12%",
             },
             container: {
                 screens: {
@@ -35,6 +36,7 @@ module.exports = {
             },
             boxShadow: {
                 custom: "0 5px 15px rgba(0, 0, 0, 0.25) ",
+                dropdown: "0 4px 20px 0 rgba(0, 0, 0, 0.1)"
             },
             transitionDuration: {
                 2000: "2000ms",

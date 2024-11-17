@@ -7,12 +7,13 @@ import {getLocalTimeZone, today} from "@internationalized/date";
 import Image from 'next/image';
 import PickDate from '@/app/components/flight/PickDate';
 export default function SearchFlight() {
+
   const [from, setFrom] = useState("Hà Nội");
   const [to, setTo] = useState("Hồ Chí Minh");
   const [isFocus, setFocus] = useState(false);
   
   return (
-    <div className='grid grid-cols-search_flight gap-2 pl-5 py-7 bg-white rounded-xl shadow-custom'>
+    <div className='grid grid-cols-search_flight gap-2 pl-5'>
         {/* from */}
         <div className=''>
             <div className='flex items-center justify-start pb-2'>
@@ -75,7 +76,7 @@ export default function SearchFlight() {
             />
         </div>
         
-        {/* date */}
+        
         {/* <div className="">
             <div className='flex items-center justify-start pb-2'>
                 <Image
@@ -115,7 +116,7 @@ export default function SearchFlight() {
             />
         </div> */}
 
-
+        {/* date */}
         <div>
             <div className='flex items-center justify-start pb-2'>
                 <Image
@@ -127,7 +128,6 @@ export default function SearchFlight() {
                 />
 
                 <label
-                    htmlFor="datepicker"
                     className="text-base font-medium px-2"
                 >
                     Ngày khởi hành
@@ -143,6 +143,7 @@ export default function SearchFlight() {
         <div className='flex items-end justify-start w-full'>
             <CtButton 
                 title = "Tìm Kiếm"
+                hr = "/list-flight"
             />
         </div>
         

@@ -21,6 +21,8 @@ export default function ScrollRevealEffect() {
       delay: 50,
       reset: true,
     });
+
+    
   }, []);
 
   return null;
