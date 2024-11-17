@@ -1,13 +1,11 @@
 'use client';
-
-import Image from 'next/image';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import HeroSection from '@/app/components/hotel/HeroSection';
+import HotelCard from '@/app/components/hotel/HotelCard';
+import PopularCategories from '@/app/components/hotel/PopularCategories';
 import { FaMicrophone } from 'react-icons/fa';
 import { AiOutlineStar, AiFillHeart, AiFillStar } from 'react-icons/ai';
-import { IoLocationOutline } from 'react-icons/io5';
-import { BsCalendar3 } from 'react-icons/bs';
-import { HiOutlineUsers } from 'react-icons/hi';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import Image from 'next/image';
 
 export default function HotelPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -17,27 +15,11 @@ export default function HotelPage() {
   const [guests, setGuests] = useState('2 adult, 1 room');
 
   const featuredDestinations = [
-    { 
-      id: 1, 
-      name: 'Sea Hotel', 
-      image: '/img/hotel_home/sea_hotel.svg', 
-      rating: 4.93, 
-      price: 990,
-      timeAgo: '2 phút ago',
-      views: '24km'
-    },
-    { 
-      id: 2, 
-      name: 'Paradise Hotel', 
-      image: '/img/hotel_home/paradise_hotel.svg', 
-      rating: 4.93, 
-      price: 990,
-      timeAgo: '2 phút ago',
-      views: '24km'
-    },
-    { id: 3, name: 'Road Hotel', image: '/img/hotel_home/road_hotel.svg', rating: 4.93, price: 990 },
-    { id: 4, name: 'Lake Hotel', image: '/img/hotel_home/lake_hotel.svg', rating: 4.93, price: 990 },
-    { id: 5, name: 'White Hotel', image: '/img/hotel_home/white_hotel.svg', rating: 4.93, price: 990 },
+    { id: 1, name: 'Sea Hotel', image: '/img/hotel_home/sea_hotel.svg', rating: 4.93, price: 990, timeAgo: 'About 10 minutes', views: '24km' },
+    { id: 2, name: 'Paradise Hotel', image: '/img/hotel_home/paradise_hotel.svg', rating: 4.93, price: 990, timeAgo: 'About 10 minutes', views: '24km' },
+    { id: 3, name: 'Road Hotel', image: '/img/hotel_home/road_hotel.svg', rating: 4.93, price: 990, timeAgo: 'About 10 minutes', views: '24km' },
+    { id: 4, name: 'Lake Hotel', image: '/img/hotel_home/lake_hotel.svg', rating: 4.93, price: 990, timeAgo: 'About 10 minutes', views: '24km' },
+    { id: 5, name: 'White Hotel', image: '/img/hotel_home/white_hotel.svg', rating: 4.93, price: 990, timeAgo: 'About 10 minutes', views: '24km' },
   ];
 
   const popularCategories = [
@@ -49,74 +31,26 @@ export default function HotelPage() {
 
   return (
     <div className="container mx-auto px-4">
-      {/* Hero Section */}
-      <div className="relative h-[620px] rounded-lg overflow-hidden mb-4">
-        <Image
-          src="/img/hotel_home/background_hotel.svg"
-          alt="Hotel Hero"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-start pt-32">
-          <h1 className="text-white text-4xl font-bold mb-8 text-center">
-            Tìm và đặt phòng khách sạn giá rẻ
-          </h1>
-          <div className="w-full max-w-4xl px-4 mt-8">
-            <div className="bg-white rounded-lg p-2 grid grid-cols-5 gap-2">
-              <div className="col-span-2 flex items-center gap-2 bg-gray-50 rounded p-2">
-                <IoLocationOutline className="text-gray-500 text-xl" />
-                <input
-                  type="text"
-                  placeholder="Location"
-                  className="bg-transparent flex-1 outline-none text-sm font-normal"
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                />
-              </div>
-              <div className="flex items-center gap-2 bg-gray-50 rounded p-2">
-                <BsCalendar3 className="text-gray-500" />
-                <input
-                  type="date"
-                  className="bg-transparent outline-none text-sm font-normal text-gray-600"
-                  value={checkIn}
-                  onChange={(e) => setCheckIn(e.target.value)}
-                  placeholder="Check-in"
-                />
-              </div>
-              <div className="flex items-center gap-2 bg-gray-50 rounded p-2">
-                <BsCalendar3 className="text-gray-500" />
-                <input
-                  type="date"
-                  className="bg-transparent outline-none text-sm font-normal text-gray-600"
-                  value={checkOut}
-                  onChange={(e) => setCheckOut(e.target.value)}
-                  placeholder="Check-out"
-                />
-              </div>
-              <button className="bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700">
-                Tìm kiếm
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <HeroSection 
+        location={location} 
+        setLocation={setLocation} 
+        checkIn={checkIn} 
+        setCheckIn={setCheckIn} 
+        checkOut={checkOut} 
+        setCheckOut={setCheckOut} 
+      />
       {/* Featured Destinations */}
       <section className="mb-20 relative">
-        {/* Title and Slide Indicators */}
-        {/* Slide Indicators */}
-        <div className="flex justify-center items-center gap-1.5">
+        <div className="flex justify-center items-center gap-1.5 mb-50">
             <div className="w-4 h-2 rounded-full bg-gray-300"></div>
             <div className="w-4 h-2 rounded-full bg-gray-300"></div>
             <div className="w-8 h-2 rounded-full bg-blue-600"></div> {/* Active indicator */}
             <div className="w-4 h-2 rounded-full bg-gray-300"></div>
             <div className="w-4 h-2 rounded-full bg-gray-300"></div>
-        </div>
+        </div>  
         <div className="text-center mb-20 mt-20">
           <h2 className="text-3xl font-bold mb-4">Top những khách sạn được yêu thích nhất</h2>
         </div>
-
-        {/* Hotel Cards Container */}
         <div className="px-8">
           <div className="flex justify-center items-center" style={{ gap: '16px' }}>
             {/* Sea Hotel */}
@@ -169,7 +103,6 @@ export default function HotelPage() {
                 </div>
               </div>
             </div>
-
             {/* Paradise Hotel */}
             <div className="w-[280px]">
               <div className="space-y-3">
@@ -220,7 +153,6 @@ export default function HotelPage() {
                 </div>
               </div>
             </div>
-
             {/* Road Hotel */}
             <div className="w-[320px]">
               <div className="space-y-3">
@@ -271,7 +203,6 @@ export default function HotelPage() {
                 </div>
               </div>
             </div>
-
             {/* Lake Hotel */}
             <div className="w-[280px]">
               <div className="space-y-3">
@@ -322,7 +253,6 @@ export default function HotelPage() {
                 </div>
               </div>
             </div>
-
             {/* White Hotel */}
             <div className="w-[240px]">
               <div className="space-y-3">
@@ -376,26 +306,7 @@ export default function HotelPage() {
           </div>
         </div>
       </section>
-
-      {/* Popular Categories */}
-      <section>
-        <h2 className="text-2xl font-bold mb-6">Popular categories</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {popularCategories.map((category) => (
-            <div key={category.id} className="relative h-48 rounded-lg overflow-hidden">
-              <Image
-                src={category.image}
-                alt={category.name}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/30 flex items-end p-4">
-                <h3 className="text-white font-semibold">{category.name}</h3>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <PopularCategories categories={popularCategories} />
     </div>
   );
 }
