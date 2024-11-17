@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import HeroSection from '@/app/components/hotel/HeroSection';
 import HotelCard from '@/app/components/hotel/HotelCard';
 import PopularCategories from '@/app/components/hotel/PopularCategories';
+import SpecialFeatures from '@/app/components/hotel/SpecialFeatures';
+import DestinationSection from '@/app/components/hotel/DestinationSection';
 import { FaMicrophone } from 'react-icons/fa';
 import { AiOutlineStar, AiFillHeart, AiFillStar } from 'react-icons/ai';
 import Image from 'next/image';
@@ -23,14 +25,15 @@ export default function HotelPage() {
   ];
 
   const popularCategories = [
-    { id: 1, name: 'Beaches', image: '/images/beaches.jpg' },
-    { id: 2, name: 'Mountains', image: '/images/mountains.jpg' },
-    { id: 3, name: 'Cities', image: '/images/cities.jpg' },
-    { id: 4, name: 'Countryside', image: '/images/countryside.jpg' },
+    { id: 1, name: 'Hotels', image: '/img/hotel_home/hotels.svg' },
+    { id: 2, name: 'Apartments', image: '/img/hotel_home/apartments.svg' },
+    { id: 3, name: 'Resorts', image: '/img/hotel_home/resorts.svg' },
+    { id: 4, name: 'Villas', image: '/img/hotel_home/villas.svg' },
+    { id: 5, name: 'Cottages', image: '/img/hotel_home/cottages.svg' },
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto">
       <HeroSection 
         location={location} 
         setLocation={setLocation} 
@@ -40,7 +43,7 @@ export default function HotelPage() {
         setCheckOut={setCheckOut} 
       />
       {/* Featured Destinations */}
-      <section className="mb-20 relative">
+      <section className="mb-28 relative">
         <div className="flex justify-center items-center gap-1.5 mb-50">
             <div className="w-4 h-2 rounded-full bg-gray-300"></div>
             <div className="w-4 h-2 rounded-full bg-gray-300"></div>
@@ -306,7 +309,9 @@ export default function HotelPage() {
           </div>
         </div>
       </section>
+      <SpecialFeatures />
       <PopularCategories categories={popularCategories} />
+      <DestinationSection />
     </div>
   );
 }
