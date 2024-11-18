@@ -2,9 +2,9 @@ import React from "react";
 import Heading from "@/app/components/Heading";
 import Image from "next/image";
 import {WHY_CHOOSE, ABOUT, TEAM} from "@/constants/about";
-import Line from "@/app/components/about/LineInAbout"
-import ScrollRevealEffect from '@/app/components/about/ScrollRevealEff';
-import ProfileCard from '@/app/components/about/ProfileCard';
+// import Line from "@/app/components/about/LineInAbout"
+// import ScrollRevealEffect from '@/app/components/about/ScrollRevealEff';
+// import ProfileCard from '@/app/components/about/ProfileCard';
 
 
 export default function About() {
