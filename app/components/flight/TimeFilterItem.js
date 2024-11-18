@@ -17,10 +17,10 @@ export default function TimeFilterItem(props) {
         ${selected ? 'bg-primary border-primary text-white' : 'border-gray-300'}
       `}
     >
-      <p className={`text-[12px] font-medium ${selected ? 'text-white' : 'text-gray-400'} group-hover:text-white`}>
+      <p className={`text-[11px] font-medium ${selected ? 'text-white' : 'text-gray-400'} group-hover:text-white`}>
         {props.title}
       </p>
-      <p className={`text-[16px] font-bold ${selected ? 'text-white' : 'text-primary'} group-hover:text-white`}>
+      <p className={`text-[14px] font-bold ${selected ? 'text-white' : 'text-primary'} group-hover:text-white`}>
         {props.time}
       </p>
     </button>

@@ -28,7 +28,7 @@ export default function FlightTicket(props) {
   }, [isOpen]);
 
   return (
-    <div className="border rounded-lg p-4 bg-white shadow-md max-w mx-auto my-4">
+    <div className="border rounded-lg p-4 bg-white shadow-md mx-auto my-4">
       {/* Tiêu đề */}
       <div className="flex justify-between items-center border-b pb-2">
         <p className="text-yellow-700 font-semibold">Giá tốt từ hãng bay</p>
@@ -92,9 +92,9 @@ export default function FlightTicket(props) {
       
       {isOpen && (
         <div ref={detailsRef} className="mt-4 border-t pt-4 text-gray-600 text-sm ">
-          <div className='flex space-x-4'>
+          <div className='flex gap-4'>
             {/* timeline */}
-            <div className="flex flex-col items-center space-y-16">
+            <div className="flex flex-col items-center gap-16">
               <div className="text-center">
                 <p className="font-medium">{props.startTime}</p>
                 <p className="text-xs text-gray-400">{props.day}</p>
@@ -120,7 +120,7 @@ export default function FlightTicket(props) {
             </div>
             
             {/* chi tiết vé */}
-            <div className="w-[543px]">
+            <div className="flex-1">
               <div className="">
                 <p className="font-medium">{props.startLoca}</p>
                 <p className="text-xs text-gray-400">Sân bay {props.startLoca}</p>

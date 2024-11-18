@@ -6,6 +6,7 @@ export default function CheckBoxFilter(props) {
   return (
     <div className="w-full box-border"> 
       <Checkbox
+        disableAnimation = "true" 
         aria-label={props.name}
         size="md"
         classNames={{
