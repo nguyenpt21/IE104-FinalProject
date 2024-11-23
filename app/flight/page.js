@@ -36,7 +36,9 @@ export default function Flight() {
         </div>
 
         <div className='absolute w-full bottom-[30px]'>
-          <SearchFlight/>
+          <div className='container mx-auto  px-5 bg-white py-7 rounded-xl shadow-custom'>
+            <SearchFlight/>
+          </div>
         </div>
       </div>
 
@@ -51,6 +53,18 @@ export default function Flight() {
             />
           </div>
         ))}
+      </div>
+
+      {/* banner */}
+      <div className='container mx-auto flex justify-center'>
+        <Image
+          className='rounded-lg'
+          src='/img/flight/promo-banner.jpg'
+          width={1100}
+          height={100}
+          alt=''
+        />
+
       </div>
 
       {/* promotion */}

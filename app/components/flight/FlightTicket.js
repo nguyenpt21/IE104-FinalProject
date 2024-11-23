@@ -2,19 +2,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import ScrollReveal from "scrollreveal";
 import Image from 'next/image';
-import { FaSuitcase, FaPlug, FaInfoCircle } from 'react-icons/fa';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import DetailTicket from "@/app/components/flight/DetailTicket";
+import {Tabs, Tab, Card, CardBody} from "@nextui-org/react";
+import FlightBenefit from "@/app/components/flight/FlightBenefit";
 import CtButton from "@/app/components/contact/CtButton";
-
+import TicketRefund from "@/app/components/flight/TicketRefund";
 
 export default function FlightTicket(props) {
   const [isOpen, setIsOpen] = useState(false);
-  const detailsRef = useRef(null);
-
   const toggleDetails = () => {
     setIsOpen(!isOpen);
   };
 
+  const detailsRef = useRef(null);
   useEffect(() => {
     if (detailsRef.current) {
       ScrollReveal().reveal(detailsRef.current, {
@@ -35,7 +36,8 @@ export default function FlightTicket(props) {
       </div>
 
       {/* Thông tin chính */}
-      <div className="mt-5 grid grid-cols-3">
+      <div className="mt-3 grid grid-cols-3">
+        
         {/* Hãng bay */}
         <div className="flex items-center space-x-3">
           <div className="w-[25%] flex-shrink-0"> 
@@ -56,8 +58,8 @@ export default function FlightTicket(props) {
         {/* Thời gian và sân bay */}
         <div className='flex items-center justify-center space-x-3 text-center'>
           <div className="">
-            <p className="text-xl font-semibold">{props.startTime}</p>
-            <p className="text-gray-500 text-sm">{props.startLoca}</p>
+            <p className="text-base font-semibold">{props.startTime}</p>
+            <p className="text-gray-500 text-[13px]">{props.startLoca}</p>
           </div>
 
           <div className="">
@@ -71,105 +73,88 @@ export default function FlightTicket(props) {
           </div>
 
           <div className="">
-            <p className="text-xl font-semibold">{props.endTime}</p>
-            <p className="text-gray-500 text-sm">{props.endLoca}</p>
+            <p className="text-base font-semibold">{props.endTime}</p>
+            <p className="text-gray-500 text-[13px]">{props.endLoca}</p>
           </div>
         </div>
 
         {/* Giá và nút chọn */}
         <div className="text-right">
           <p className="text-orangee text-[18px] font-semibold">{props.price} VND/khách</p>
-          <button
-            onClick={toggleDetails}
-            className="mt-2 px-4 py-1 bg-primary text-white rounded-lg border border-primary"
-          >
-            {isOpen ? <IoIosArrowUp className="text-xl"/> : <IoIosArrowDown className="text-xl" />}
-          </button>
+          
+          <div className="flex justify-end items-end mt-4">
+              <CtButton
+                title = "Đặt chỗ"
+                hr = "/"
+              />
+          </div>
+          
         </div>
+      </div>
+
+      <div className="flex justify-center items-center">
+        <button
+          onClick={toggleDetails}
+          className="mt-2 px-12 py-[2px] rounded-lg text-white bg-primary"
+        >
+          {isOpen ? <IoIosArrowUp className="text-base" /> : <IoIosArrowDown className="text-base" />}
+        </button>
       </div>
 
       {/* -------------Chi tiết bổ sung---------------- */}
       
       {isOpen && (
-        <div ref={detailsRef} className="mt-4 border-t pt-4 text-gray-600 text-sm ">
-          <div className='flex gap-4'>
-            {/* timeline */}
-            <div className="flex flex-col items-center gap-16">
-              <div className="text-center">
-                <p className="font-medium">{props.startTime}</p>
-                <p className="text-xs text-gray-400">{props.day}</p>
-              </div>
+        <div ref={detailsRef} className="mt-2 border-t">
 
-              <div className="text-center">
-                <p className="text-sm text-gray-400">{props.period}</p>
-              </div>
-
-              <div className="text-center ">
-                <p className="font-medium">{props.endTime}</p>
-                <p className="text-xs text-gray-400">{props.day}</p>
-              </div>
-            </div>
-
-            {/* line */}
-            <div className='mt-2'>
-                <div className='border-[1px] border-primary w-[10px] h-[10px] rounded-full'></div>
-                <div className='h-[175px] w-[10px] flex justify-center'>
-                  <div className=' bg-gray-300 h-[175px] w-[1.5px]'></div>
-                </div>
-                <div className=' bg-primary w-[10px] h-[10px] rounded-full'></div>
-            </div>
-            
-            {/* chi tiết vé */}
-            <div className="flex-1">
-              <div className="">
-                <p className="font-medium">{props.startLoca}</p>
-                <p className="text-xs text-gray-400">Sân bay {props.startLoca}</p>
-              </div>
-              
-              <div className='my-4'>
-                <p className="">
-                  Vietravel Airlines
-                </p>
-                <p className="mb-1">
-                  VU-787
-                </p>
-                <p className="bg-gray-100 px-2 py-1 rounded-2xl text-xs w-fit mb-1">
-                  Nâng hạng chuyến bay khi đặt chỗ
-                </p>
-                <div className="flex items-start space-x-14 mt-2">
-                  <div className=' flex space-x-2'>
-                    <div className='h-[20px] flex items-center'>
-                      <FaSuitcase className=" text-gray-400" />
-                    </div>
-                    <div className='text-gray-500'>
-                      <p>Hành lý 0 kg</p>
-                      <p>Hành lý xách tay 7 kg</p>
-                    </div>
-                  </div>
-
-                  <div className='flex items-start space-x-2'>
-                    <div className='h-[20px] flex items-center'>
-                      <FaInfoCircle className=" text-gray-400" />
-                    </div>
-                    <p className='text-gray-500'>Airbus A321-100/200</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="">
-                <p className="font-medium">{props.endLoca}</p>
-                <p className="text-xs text-gray-400">Sân bay {props.endLoca}</p>
-              </div>
-            </div>
-
-            <div className="flex justify-end items-end">
-              <CtButton
-                title = "Đặt chỗ"
-                hr = "/"
-              />
-            </div>
-
+          <div className="flex w-full flex-col px-2">
+            <Tabs 
+                aria-label="Options" 
+                
+                variant="underlined"
+                classNames={{
+                    tabList: "gap-6 w-full p-0 ", //wrap tabList
+                    tab: "max-w-fit px-0 h-12",
+                    cursor: "bg-primary", //the underline
+                    tabContent: "text-gray-500 font-semibold text-[14px] group-data-[selected=true]:text-primary group-data-[hover=true]:text-primary", //the text in tab 
+                }}
+            >
+                <Tab key="detail" title="Chi tiết" className="p-0">
+                    <Card className="pt-3"> {/* bao content */}
+                        <CardBody className='p-0'>
+                          <DetailTicket
+                            startTime = {props.startTime}
+                            day = {props.day}
+                            period = {props.period}
+                            endTime = {props.endTime}
+                            startLoca = {props.startLoca}
+                            endLoca = {props.endLoca}
+                          />
+                        </CardBody>
+                    </Card>  
+                </Tab>
+                <Tab key="benefit" title="Các lợi ích đi kèm" className="p-0">
+                    <Card className="">
+                        <CardBody className='p-0'>
+                          <FlightBenefit
+                            logo={props.logo}
+                            brand={props.brand}
+                            startLoca = {props.startLoca}
+                            endLoca = {props.endLoca}
+                          />
+                        </CardBody>
+                    </Card>  
+                </Tab>
+                <Tab key="ticketRefund" title="Hoàn vé" className="p-0">
+                    <Card className="p-0">
+                        <CardBody className='p-0'>
+                          <TicketRefund/>
+                        </CardBody>
+                    </Card>  
+                </Tab>
+            </Tabs>
           </div>
+
+          
         </div>
       )}
     </div>

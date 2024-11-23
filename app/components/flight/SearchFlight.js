@@ -13,7 +13,7 @@ export default function SearchFlight() {
   const [isFocus, setFocus] = useState(false);
   
   return (
-    <div className='container mx-auto flex gap-4 px-5 py-7 bg-white rounded-xl shadow-custom'>
+    <div className='flex gap-4'>
         {/* From */}
         <div className='flex-1'>
             <div className='flex items-center justify-start pb-2'>
