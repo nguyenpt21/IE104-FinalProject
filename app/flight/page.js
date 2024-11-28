@@ -67,7 +67,7 @@ export default function Flight() {
 
       </div>
 
-      {/* promotion */}
+      {/* mã giảm giá */}
       <div className='container mx-auto my-12'>
         <div className='text-2xl font-semibold  mb-6'>
           <p>Đi chơi thả ga không lo về giá</p>

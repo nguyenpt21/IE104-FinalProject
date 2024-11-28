@@ -10,15 +10,12 @@ export default function PriceFilter() {
             size='sm'
             defaultSelectedKeys={["Vagabond giới thiệu"]}
             labelPlacement="outside-left"
-            // defaultSelectedKeys={["cat"]}
             className="max-w-xs flex justify-center items-center"
             classNames={{
                 label: "whitespace-nowrap text-[14px] text-gray-500",
-                // mainWrapper: "border-2 border-gray-200 rounded-lg ",
                 innerWrapper: "text-gray-500", //giá trị được chọn
                 selectorIcon: "text-gray-500 data-[open=true]:text-primary", //icon dropdown
-
-                //effect of row input 
+                //ô input
                 trigger: "border-2 border-gray-200 rounded-lg data-[open=true]:border-primary",
             }}
             scrollShadowProps={{

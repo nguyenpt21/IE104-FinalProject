@@ -125,24 +125,11 @@ export default function ListFlight() {
                                 alt=''
                             />
                         </div>
-
+                        {/* bộ sắp xếp giá */}
                         <div className='w-full flex justify-end mt-4'>
                             <PriceFilter></PriceFilter>
                         </div>
 
-                        <div>
-                            <FlightTicket
-                                logo = '/img/airline/vietjet-logo.png'
-                                brand = "VietJet Air"
-                                startTime = "22:00"
-                                endTime = "23:55"
-                                startLoca = "Hà Nội"
-                                endLoca = "Sài Gòn"
-                                price = "1.722.345"
-                                day = "15 tháng 11"
-                                period = "01h 55m"
-                            />
-                        </div>
 
                         {FLIGHT_TICKET.map((row, key) => (
                             <div key={key}>

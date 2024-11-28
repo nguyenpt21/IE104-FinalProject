@@ -10,16 +10,15 @@ export default function TicketRefund() {
             disableAnimation={true}
             className='p-0'
             classNames={{
-                slot: "",
                 tabList: "gap-[5px] mr-5",
                 tab: "h-12", 
                 tabContent: `
-                    p-3 border-secondary border rounded-md flex-1 text-left text-sm font-medium 
-                    text-gray-500 group-data-[selected=true]:text-primary 
+                    p-3 border-secondary border rounded-md flex-1 text-left text-sm font-medium text-gray-500
+                    group-data-[selected=true]:text-primary 
                     group-data-[selected=true]:border-primary 
                     group-data-[hover=true]:text-primary 
                     group-data-[hover=true]:border-primary
-                `, // Allow text to wrap
+                `, 
             }}
         >
             <Tab key="policy" 

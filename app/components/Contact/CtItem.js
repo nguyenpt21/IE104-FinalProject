@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function ContactItem(props) {
   return (
-    <div className='transition transform hover:scale-105 hover:shadow-xl duration-300 my-6 rounded-xl'>
+    <div className='hover:scale-105 hover:shadow-xl duration-300 my-6 rounded-xl'>
         <div className='text-center bg-white p-6 rounded-xl'>
             <div className='flex items-center justify-center p-5'>
                 <Image

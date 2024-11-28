@@ -11,15 +11,23 @@ import TicketRefund from "@/app/components/flight/TicketRefund";
 
 export default function FlightTicket(props) {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleDetails = () => {
-    setIsOpen(!isOpen);
-  };
 
   const detailsRef = useRef(null);
+  const cardRef = useRef(null);
+
+  const handleClickCard = (event) => {
+    if (
+      cardRef.current && cardRef.current.contains(event.target)
+      && !event.target.closest(".ct-button")
+    ){
+      setIsOpen(!isOpen);
+    }
+  }
+  
   useEffect(() => {
     if (detailsRef.current) {
       ScrollReveal().reveal(detailsRef.current, {
-        duration: 300,
+        duration: 400,
         opacity: [0, 1],
         distance: "-50px",
         easing: "ease-out",
@@ -27,6 +35,13 @@ export default function FlightTicket(props) {
       });
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickCard);
+    return () => {
+      document.removeEventListener("mousedown", handleClickCard);
+    };
+  }); 
 
   return (
     <div className="border rounded-lg p-4 bg-white shadow-md mx-auto my-4">
@@ -36,10 +51,10 @@ export default function FlightTicket(props) {
       </div>
 
       {/* Thông tin chính */}
-      <div className="mt-3 grid grid-cols-3">
+      <div className="mt-3 grid grid-cols-3" ref={cardRef}>
         
         {/* Hãng bay */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3" >
           <div className="w-[25%] flex-shrink-0"> 
             <Image
               src={props.logo}
@@ -82,29 +97,22 @@ export default function FlightTicket(props) {
         <div className="text-right">
           <p className="text-orangee text-[18px] font-semibold">{props.price} VND/khách</p>
           
-          <div className="flex justify-end items-end mt-4">
-              <CtButton
-                title = "Đặt chỗ"
-                hr = "/"
-              />
+          <div className="flex justify-end items-end mt-5 ">
+              <div className="ct-button">
+                <CtButton
+                  title = "Đặt chỗ"
+                  hr = "/"
+                />
+              </div>
           </div>
-          
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
-        <button
-          onClick={toggleDetails}
-          className="mt-2 px-12 py-[2px] rounded-lg text-white bg-primary"
-        >
-          {isOpen ? <IoIosArrowUp className="text-base" /> : <IoIosArrowDown className="text-base" />}
-        </button>
-      </div>
 
       {/* -------------Chi tiết bổ sung---------------- */}
       
       {isOpen && (
-        <div ref={detailsRef} className="mt-2 border-t">
+        <div ref={detailsRef} className="mt-4 border-t">
 
           <div className="flex w-full flex-col px-2">
             <Tabs 
@@ -119,7 +127,7 @@ export default function FlightTicket(props) {
                 }}
             >
                 <Tab key="detail" title="Chi tiết" className="p-0">
-                    <Card className="pt-3"> {/* bao content */}
+                    <Card className="pt-3"> {/* bao content dưới tablist*/}
                         <CardBody className='p-0'>
                           <DetailTicket
                             startTime = {props.startTime}
@@ -153,8 +161,6 @@ export default function FlightTicket(props) {
                 </Tab>
             </Tabs>
           </div>
-
-          
         </div>
       )}
     </div>
