@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function FlightItem(props) {
   return (
-    <div className='border rounded-xl border-gray-300 py-3 pl-5 hover:border-gray-500 duration-300'>
+    <div className='border rounded-xl border-gray-300 py-3 pl-5 hover:border-gray-500 duration-300 hover:scale-105'>
         <a href='/'
             className='text-[15px] font-bold'
         >

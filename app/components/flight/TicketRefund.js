@@ -3,17 +3,17 @@ import {Tabs, Tab, Card, CardBody} from "@nextui-org/react";
 
 export default function TicketRefund() {
   return (
-    <div className="flex w-full flex-col ">
+    <div className="flex w-full flex-col bg-inherit">
         <Tabs 
             aria-label="refund" 
             isVertical={true}
             disableAnimation={true}
             className='p-0'
             classNames={{
-                tabList: "gap-[5px] mr-5",
+                tabList: "gap-[5px] mr-5 bg-inherit",
                 tab: "h-12", 
                 tabContent: `
-                    p-3 border-secondary border rounded-md flex-1 text-left text-sm font-medium text-gray-500
+                    bg-white p-3 border-secondary border rounded-md flex-1 text-left text-sm font-medium text-gray-500
                     group-data-[selected=true]:text-primary 
                     group-data-[selected=true]:border-primary 
                     group-data-[hover=true]:text-primary 
@@ -25,7 +25,7 @@ export default function TicketRefund() {
                 title="Chính sách hoàn vé" 
                 className='p-0'
             >
-                <Card className='p-3'>
+                <Card className='p-3' shadow="none">
                     <CardBody className='p-0 text-sm'>
                         <p className='font-semibold text-base mb-3'>
                             Chính sách hoàn vé của bạn
@@ -45,7 +45,7 @@ export default function TicketRefund() {
             
 
             <Tab key="fare" title="Phí hoàn vé" className='p-0'>
-                <Card className='p-3'>
+                <Card className='p-3' shadow="none">
                     <CardBody className='p-0'>
                         <p className='font-semibold text-base mb-3'>
                             Giá trị hoàn ước tính
@@ -64,7 +64,7 @@ export default function TicketRefund() {
             </Tab>
 
             <Tab key="steps" title="Quy trình hoàn vé " className='p-0'>
-                <Card className='p-3'>
+                <Card className='p-3' shadow="none">
                     <CardBody className='p-0'>
                         <p className='font-semibold text-base mb-3'>
                             Quy trình hoàn lại vé

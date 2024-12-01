@@ -8,6 +8,7 @@ import { FLIGHT_POPULAR, PROMO_FLIGHT_CODE } from '@/constants/flight'
 import WhyChooseItem from '@/app/components/flight/WhyChooseItem';
 import { WHY_CHOOSE_FLIGHT } from '@/constants/flight'
 import FlightItem from '@/app/components/flight/FlightItem';
+import ModalReview from '@/app/components/flight/ModalReview';
 
 export default function Flight() {
   const responsive = {
@@ -106,6 +107,10 @@ export default function Flight() {
               </div>
           ))}
         </div>
+      </div>
+
+      <div>
+        <ModalReview></ModalReview>
       </div>
 
     </div>

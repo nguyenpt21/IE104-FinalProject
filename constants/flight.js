@@ -193,3 +193,20 @@ export const FLIGHT_TICKET = [
     },
     
 ]
+
+export const OPTION_SORT = [
+    "Vagabond giới thiệu",
+    "Giá (thấp đến cao)",
+    "Giá (cao đến thấp)",
+];
+
+export const FLIGHT_REVIEW = [
+    {
+        flight: "VietjetAir: Hà Nội - TP Hồ Chí Minh",
+        reviewer: "Ngô Phương Quyên",
+        reviewTime: "5 ngày trước",
+        score: "5",
+        satisfaction: "Hài lòng",
+        content: "Siêu dễ sử dụng. Vé có thể được cung cấp 1 giờ sau khi đặt vé, đủ để chúng tôi đi từ khách sạn đến sân bay! Cảm ơn vagabond!"
+    },
+]

@@ -116,8 +116,6 @@ export default function FlightTicket(props) {
 
           <div className="flex w-full flex-col px-2">
             <Tabs 
-                aria-label="Options" 
-                
                 variant="underlined"
                 classNames={{
                     tabList: "gap-6 w-full p-0 ", //wrap tabList
@@ -127,7 +125,7 @@ export default function FlightTicket(props) {
                 }}
             >
                 <Tab key="detail" title="Chi tiết" className="p-0">
-                    <Card className="pt-3"> {/* bao content dưới tablist*/}
+                    <Card className="pt-3" shadow="none"> {/* bao content dưới tablist*/}
                         <CardBody className='p-0'>
                           <DetailTicket
                             startTime = {props.startTime}
@@ -141,7 +139,7 @@ export default function FlightTicket(props) {
                     </Card>  
                 </Tab>
                 <Tab key="benefit" title="Các lợi ích đi kèm" className="p-0">
-                    <Card className="">
+                    <Card className="" shadow="none">
                         <CardBody className='p-0'>
                           <FlightBenefit
                             logo={props.logo}
@@ -153,7 +151,7 @@ export default function FlightTicket(props) {
                     </Card>  
                 </Tab>
                 <Tab key="ticketRefund" title="Hoàn vé" className="p-0">
-                    <Card className="p-0">
+                    <Card className="p-0" shadow="none">
                         <CardBody className='p-0'>
                           <TicketRefund/>
                         </CardBody>
