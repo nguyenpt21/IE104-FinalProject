@@ -12,12 +12,12 @@ export default function Banner() {
             height={100}
         ></Image>
 
-        <div className='w-[40%] text-center absolute top-[40px] left-1/2 -translate-x-2/4'>
+        <div className='container mx-auto w-[50%] text-center absolute top-[30px] left-1/2 -translate-x-2/4'>
             <h1 className='text-white text-5xl font-bold py-4'>
                 {BANNER_CONTACT.title}
             </h1>
 
-            <p className='text-white text-xl py-4'>
+            <p className=' text-white text-xl py-4'>
                 {BANNER_CONTACT.desc}
             </p>
         </div>
