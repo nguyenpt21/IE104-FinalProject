@@ -7,7 +7,7 @@ import { CONTACT_INFO } from "@/constants/contact";
 import ContactItem from "@/app/components/contact/CtItem";
 import ContactForm from "@/app/components/contact/CtForm";
 import GetInTouch from "@/app/components/contact/GetInTouch";
-import Heading from "@/app/components/Heading";
+import Heading from "@/app/components/contact/Heading";
 import Accod from "@/app/components/contact/Accod";
 
 export default function Contact() {
@@ -17,7 +17,7 @@ export default function Contact() {
             <Banner />
 
             {/* Thông tin liên hệ */}
-            <div className="mx-36 my-5">
+            <div className="container mx-auto my-5">
                 <div className="grid grid-cols-3">
                     {CONTACT_INFO.map((row, key) => (
                         <div key={key} className="w-[80%]">
@@ -33,7 +33,7 @@ export default function Contact() {
             </div>
 
             {/* Form liên hệ */}
-            <div className="mx-28 my-10">
+            <div className="container mx-auto my-10">
                 <div className="grid grid-cols-two_col_custom">
                     <GetInTouch></GetInTouch>
                     <ContactForm></ContactForm>
@@ -41,11 +41,15 @@ export default function Contact() {
             </div>
 
             {/* Câu hỏi thường gặp */}
-            <Heading title="Các câu hỏi thường gặp" />
-            <div className="grid grid-cols-2 gap-2 mx-10">
-                <Accod />
-                <Accod />
+            <div className="container mx-auto">
+                <Heading title="Các câu hỏi thường gặp" />
+                <div className="my-2 grid grid-cols-2 gap-2">
+                    <Accod />
+                    <Accod />
+                </div>
             </div>
+
+            
         </div>
     );
 }

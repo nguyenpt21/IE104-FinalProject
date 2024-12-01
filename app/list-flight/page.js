@@ -6,7 +6,7 @@ import PriceFilter from '@/app/components/flight/PriceFilter';
 import RangeSliderFilter from '@/app/components/flight/RangeSliderFilter';
 import SearchFlight from '@/app/components/flight/SearchFlight'
 import TimeFilterItem from '@/app/components/flight/TimeFilterItem';
-import { FLIGHT_FILTER_BRAND } from '@/constants/flight';
+import { FLIGHT_FILTER_BRAND, FLIGHT_TICKET } from '@/constants/flight';
 import { TIME_FILTER } from '@/constants/flight'
 import Image from 'next/image';
 import React from 'react'
@@ -18,7 +18,9 @@ export default function ListFlight() {
     <div className=''>
         {/* search */}
         <div className='py-3 border-b border-gray-100'>
-            <SearchFlight/>
+            <div className='container mx-auto  p-3'>
+                <SearchFlight/>
+            </div>
         </div>
 
         <div className=' bg-slate-50'>
@@ -123,24 +125,27 @@ export default function ListFlight() {
                                 alt=''
                             />
                         </div>
-
+                        {/* bộ sắp xếp giá */}
                         <div className='w-full flex justify-end mt-4'>
                             <PriceFilter></PriceFilter>
                         </div>
 
-                        <div>
-                            <FlightTicket
-                                logo = '/img/airline/vietjet-logo.png'
-                                brand = "VietJet Air"
-                                startTime = "22:00"
-                                endTime = "23:55"
-                                startLoca = "Hà Nội"
-                                endLoca = "Sài Gòn"
-                                price = "1.722.345"
-                                day = "15 tháng 11"
-                                period = "01h 55m"
-                            />
-                        </div>
+
+                        {FLIGHT_TICKET.map((row, key) => (
+                            <div key={key}>
+                                <FlightTicket
+                                    logo = {row.logo}
+                                    brand = {row.brand}
+                                    startTime = {row.startTime}
+                                    endTime = {row.endTime}
+                                    startLoca = {row.startLoca}
+                                    endLoca = {row.endLoca}
+                                    price = {row.price}
+                                    day = {row.day}
+                                    period = {row.period}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

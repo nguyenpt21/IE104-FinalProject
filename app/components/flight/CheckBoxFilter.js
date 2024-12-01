@@ -10,13 +10,13 @@ export default function CheckBoxFilter(props) {
         aria-label={props.name}
         size="md"
         classNames={{
-          wrapper: [
+          wrapper: [ //ô checkbox ban đầu
             "before:border-secondary",
             "before:border-[1.5px]",
-            "before:!rounded-md",
-            "after:!rounded-md",
+            "before:!rounded-md", //border box
+            "after:!rounded-md", //border check
           ],
-          icon: "bg-primary text-white",
+          icon: "bg-primary text-white", //icon check
         }}
         className="p-0 my-1 mx-3 w-full box-border" 
       >
