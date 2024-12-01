@@ -4,7 +4,7 @@ import { IoIosStar } from "react-icons/io";
 
 export default function TourCard({ card }) {
     return (
-        <Link href="/">
+        <Link href="/tour-detail">
             <div className="rounded-xl border h-[350px] flex flex-col shadow-md overflow-hidden translate-y">
                 <div className="h-[200px] relative">
                     <Image
