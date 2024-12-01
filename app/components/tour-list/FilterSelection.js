@@ -35,7 +35,7 @@ export default function FilterSelection({ icon, text, dropdown }) {
                 {text}
             </button>
             {open && (
-                <div className="absolute top-12">
+                <div className="absolute top-12 z-20">
                     {React.cloneElement(dropdown, { open, handleToggle})}
                 </div>
             )}

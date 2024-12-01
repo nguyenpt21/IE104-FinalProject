@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "@/app/components/Heading";
+import Heading from "@/app/components/contact/Heading";
 import Image from "next/image";
 import {WHY_CHOOSE, ABOUT, TEAM} from "@/constants/about";
 import Line from "@/app/components/about/LineInAbout"
@@ -9,12 +9,14 @@ import ProfileCard from '@/app/components/about/ProfileCard';
 
 export default function About() {
     return (
-        <>
+        <div>
             <ScrollRevealEffect />
 
             {/* section 1 */}
-            <Heading title="Về chúng tôi" />
-            <div className="flex items-center justify-between px-10 mb-10">
+            <div className="my-10">
+                <Heading title="Về chúng tôi" />
+            </div>
+            <div className="flex items-center justify-between mb-10">
                 <div className="w-1/2 pr-10 flex items-center justify-end">
                     <Image
                         src={WHY_CHOOSE.picture}
@@ -56,7 +58,7 @@ export default function About() {
             </div>
 
             {/* section 2 */}
-            <div className="mx-36 grid grid-cols-three_col_custom">
+            <div className="container mx-auto grid grid-cols-three_col_custom">
                 <div className="mx-auto flex flex-col w-96">
                     <div className="px-5 mb-16 left-element">
                         <p className="text-2xl font-bold py-5">
@@ -115,12 +117,16 @@ export default function About() {
                     </div>
                 </div>
             </div>
+            
             {/* section 3 */}
-            <Heading title="Team & Founder" />
-            <div className="mx-36 m-20">
+            <div className="my-10">
+                <Heading title="Team & Founder" />
+            </div>
+            
+            <div className="container mx-auto mt-24 mb-10">
                 <div className="grid grid-cols-3">
                     {TEAM.map((row, key) => (
-                        <div key={key}>
+                        <div key={key} className="flex items-center justify-center">
                             <ProfileCard
                                 img={row.img}
                                 name={row.name}
@@ -130,6 +136,6 @@ export default function About() {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     );
 }

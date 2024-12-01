@@ -1,8 +1,6 @@
 import React from 'react'
 import { FaSuitcase, FaPlug, FaInfoCircle } from 'react-icons/fa';
 
-
-
 export default function DetailTicket(props) {
   return (
         <div className='flex gap-4 text-gray-600 text-sm '>

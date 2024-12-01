@@ -1,5 +1,5 @@
 export const BANNER_CONTACT = {
-    img: "/img/contact/banner-2.jpeg",
+    img: "/img/contact/banner.jpeg",
     title: "LIÊN HỆ",
     desc: "Liên hệ với chúng tôi ngay để được hỗ trợ nhanh chóng và giải đáp mọi thắc mắc về chuyến đi của bạn"
 }

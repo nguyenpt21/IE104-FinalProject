@@ -6,15 +6,15 @@ import dayjs from 'dayjs';
 import { FaCalendarAlt } from "react-icons/fa";
 
 
-export default function PickDate(props) {
+export default function PickDate() {
     
-    const [isFocus, setFocus] = useState(false);
+  const [isFocus, setFocus] = useState(false);
   return (
     <div>
         <DatePicker
-            defaultValue={dayjs()}
+            defaultValue={dayjs()} //hiển thị ngày hiện tại
             format="DD/MM/YYYY"
-            placeholder={props.text}
+            //placeholder={props.text}
             style={{
                 borderColor: isFocus ? '#27B5FC' : '#D1D5DB', // Màu viền
                 borderWidth: '2px',

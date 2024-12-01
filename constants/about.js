@@ -34,17 +34,17 @@ export const ABOUT = {
 
 export const TEAM = [
     {
-        img: "/img/about/member.png",
+        img: "/img/about/member2.jpg",
         name: "Ngô Phương Quyên",
         role: "CEO & Founder"
     },
     {
-        img: "/img/about/member.png",
+        img: "/img/about/member1.jpg",
         name: "Phạm Trung Nguyên",
         role: "CEO & Founder"
     },
     {
-        img: "/img/about/member.png",
+        img: "/img/about/member3.jpg",
         name: "Ngô Thị Như Quỳnh",
         role: "CEO & Founder"
     }

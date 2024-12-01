@@ -6,7 +6,7 @@ import PriceFilter from '@/app/components/flight/PriceFilter';
 import RangeSliderFilter from '@/app/components/flight/RangeSliderFilter';
 import SearchFlight from '@/app/components/flight/SearchFlight'
 import TimeFilterItem from '@/app/components/flight/TimeFilterItem';
-import { FLIGHT_FILTER_BRAND, FLIGHT_TICKET } from '@/constants/flight';
+import { FLIGHT_FILTER_BRAND, FLIGHT_TICKET, OPTION_SORT } from '@/constants/flight';
 import { TIME_FILTER } from '@/constants/flight'
 import Image from 'next/image';
 import React from 'react'
@@ -17,7 +17,7 @@ export default function ListFlight() {
   return (
     <div className=''>
         {/* search */}
-        <div className='py-3 border-b border-gray-100'>
+        <div className='sticky top-[103px] z-10 bg-white py-3 border-b border-gray-100'>
             <div className='container mx-auto  p-3'>
                 <SearchFlight/>
             </div>
@@ -34,9 +34,9 @@ export default function ListFlight() {
                     />
                 </div>
 
-                <div className=' grid grid-cols-two_col_custom_3 gap-2'>
+                <div className='grid grid-cols-two_col_custom_3 gap-2'>
                     {/* ----BỘ LỌC------ */}
-                    <div className='bg-white rounded-md p-4 max-h-[700px] overflow-y-auto'> {/* scroll */}
+                    <div className='-z-0 bg-white rounded-md p-4 max-h-[700px] overflow-y-auto'> {/* scroll */}
                         
                         {/* brand */}
                         <div className='pb-4 border-b border-gray-300'>
@@ -48,7 +48,7 @@ export default function ListFlight() {
 
                             {/* checkbox */}
                             {FLIGHT_FILTER_BRAND.map((row, key) => (
-                                <div key={key}>
+                                <div className='' key={key}>
                                     <CheckBoxFilter
                                         img = {row.img}
                                         name = {row.name}
@@ -125,24 +125,14 @@ export default function ListFlight() {
                                 alt=''
                             />
                         </div>
-
+                        {/* bộ sắp xếp giá */}
                         <div className='w-full flex justify-end mt-4'>
-                            <PriceFilter></PriceFilter>
+                            <PriceFilter
+                                selectTitle={"Sắp xếp theo"}
+                                optionList={OPTION_SORT}
+                            ></PriceFilter>
                         </div>
 
-                        <div>
-                            <FlightTicket
-                                logo = '/img/airline/vietjet-logo.png'
-                                brand = "VietJet Air"
-                                startTime = "22:00"
-                                endTime = "23:55"
-                                startLoca = "Hà Nội"
-                                endLoca = "Sài Gòn"
-                                price = "1.722.345"
-                                day = "15 tháng 11"
-                                period = "01h 55m"
-                            />
-                        </div>
 
                         {FLIGHT_TICKET.map((row, key) => (
                             <div key={key}>
