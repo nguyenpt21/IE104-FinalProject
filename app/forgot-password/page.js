@@ -4,7 +4,7 @@ import { FaEnvelope } from 'react-icons/fa';
 
 export default function ForgotPassword() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+    <div className="bg-[url('/img/login/background.svg')] min-h-screen flex items-center justify-center bg-gray-50 p-4">
       <div className="bg-white rounded-lg shadow-lg w-full max-w-[75%] h-[400px] p-8">
         <h2 className="text-2xl font-bold mb-6">Quên mật khẩu</h2>
         
@@ -15,8 +15,8 @@ export default function ForgotPassword() {
             <input
               type="email"
               placeholder="Email"
-              className="w-full px-4 py-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200"
-            />
+              className="w-full pl-10 pr-3 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
           </div>
         </div>
 
@@ -25,7 +25,7 @@ export default function ForgotPassword() {
         </p>
 
         <button 
-          className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-4 rounded-lg mb-4 transition duration-300"
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-lg mb-4 transition duration-300"
         >
           Lấy lại mật khẩu
         </button>

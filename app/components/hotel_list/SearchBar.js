@@ -2,7 +2,6 @@ import React from 'react';
 import { IoLocationOutline } from 'react-icons/io5';
 import { BsCalendar3 } from 'react-icons/bs';
 import PickDate from './DatePicker';
-import Link from 'next/link';
 
 const SearchBar = ({ location, setLocation, checkIn, setCheckIn, checkOut, setCheckOut }) => {
   return (
@@ -36,12 +35,9 @@ const SearchBar = ({ location, setLocation, checkIn, setCheckIn, checkOut, setCh
             className="bg-transparent outline-none text-sm font-semibold text-gray-800 flex-1"
           />
         </div>
-        
-        <Link href="/hotel-list">
-          <button className="bg-[#27B5FC] text-white rounded-lg px-4  hover:bg-blue-600 transition duration-200 font-bold" style={{width: '100%', height: '100%'}}>
-            Tìm kiếm
-          </button>
-        </Link>
+        <button Link href="/hotel-list" className="bg-[#27B5FC] text-white rounded-lg px-4 py-2 hover:bg-blue-600 transition duration-200 font-bold">
+          Tìm kiếm
+        </button>
       </div>
     </div>
   );

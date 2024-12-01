@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { FaFacebook, FaTwitter, FaLinkedin, FaEnvelope, FaLock } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function SignIn() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="bg-[url('/img/login/background.svg')] min-h-screen flex items-center justify-center bg-gray-50">
       <div className="bg-white rounded-lg shadow-lg w-full max-w-4xl flex overflow-hidden">
         {/* Right Section */}
         <div className="w-1/2 p-12">
@@ -35,7 +36,7 @@ export default function SignIn() {
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full px-4 py-2 pl-10 border rounded-lg bg-gray-100 focus:outline-none"
+                className="w-full pl-10 pr-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div className="relative">
@@ -43,7 +44,7 @@ export default function SignIn() {
               <input
                 type="password"
                 placeholder="Mật khẩu"
-                className="w-full px-4 py-2 pl-10 border rounded-lg bg-gray-100 focus:outline-none"
+                className="w-full pl-10 pr-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div className="text-center">
@@ -51,20 +52,20 @@ export default function SignIn() {
                 Quên mật khẩu?
               </a>
             </div>
-            <button className="mx-auto px-12 bg-[#E9ECEF] text-black py-1.5 rounded-full hover:bg-gray-300 block transition duration-300 ease-in-out transform hover:scale-110">
+            <button className="mx-auto px-8 text-white bg-blue-500 py-2 rounded-full ml-28 hover:bg-blue-600 transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
               Đăng nhập
             </button>
           </form>
         </div>
 
         {/* Left Section */}
-        <div className="w-1/2 bg-gray-300 p-12 flex flex-col justify-center items-center text-center">
+        <div className="bg-[url('/img/login/login.svg')] w-1/2 bg-gray-300 p-12 flex flex-col justify-center items-center text-center">
           <h2 className="text-3xl font-bold mb-4">Xin chào!</h2>
-          <p className="text-gray-700 mb-6">
+          <p className="text-white mb-6">
             Đăng ký ngay để nhận thông tin ưu đãi độc quyền chúng tôi nếu bạn chưa có tài khoản.
           </p>
           <Link href="/sign-up">
-            <button className="px-8 py-2 border-2 border-gray-600 rounded-full text-gray-700 hover:bg-gray-400">
+            <button className="px-8 py-2 border-2 border-white  rounded-full text-white hover:bg-white hover:text-blue-600 transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
               Đăng ký
             </button>
           </Link>
