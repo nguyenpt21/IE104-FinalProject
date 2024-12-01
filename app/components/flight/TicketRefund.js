@@ -11,7 +11,9 @@ export default function TicketRefund() {
             className='p-0'
             classNames={{
                 tabList: "gap-[5px] mr-5 bg-inherit",
-                tab: "h-12", 
+                tab: `h-12
+                    data-[hover-unselected=true]:opacity-100
+                `, 
                 tabContent: `
                     bg-white p-3 border-secondary border rounded-md flex-1 text-left text-sm font-medium text-gray-500
                     group-data-[selected=true]:text-primary 
