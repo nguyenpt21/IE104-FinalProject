@@ -8,9 +8,13 @@ import { IoLanguage } from "react-icons/io5";
 import DateRangePicker from "../components/tour-list/DateRangePicker";
 import FilterSelection from "../components/tour-list/FilterSelection";
 import CateSelectionDropdown from "../components/tour-list/CateSelectionDropdown";
-import PriceSlider from "../components/tour-list/PriceSlider";
 import LangSelectionDropdown from "../components/tour-list/LangSelectionDropdown";
-import { OPTION_SORT, TOUR_LIST, TOUR_REVIEWS, TREND_TOUR } from "@/constants/tour-list";
+import {
+    OPTION_SORT,
+    TOUR_LIST,
+    TOUR_REVIEWS,
+    TREND_TOUR,
+} from "@/constants/tour-list";
 import TourCard from "../components/tour-list/TourCard";
 import SelectItem from "../components/tour-list/SelectItem";
 import Pagination from "../components/tour-list/Pagination";
@@ -19,6 +23,7 @@ import TourReviewCard from "../components/tour-list/TourReviewCard";
 import FrequentQuestions from "../components/tour-list/FrequentQuestions";
 import Image from "next/image";
 import FilterModal from "../components/tour-list/FilterModal";
+import PriceSliderDropdown from "../components/tour-list/PriceSliderDropdown";
 
 export default function TourList() {
     const responsiveReviewCardList = {
@@ -107,7 +112,7 @@ export default function TourList() {
                                 <IoPricetagsOutline className="w-5 h-5"></IoPricetagsOutline>
                             }
                             text={"Giá"}
-                            dropdown={<PriceSlider></PriceSlider>}
+                            dropdown={<PriceSliderDropdown></PriceSliderDropdown>}
                         ></FilterSelection>
                         <FilterSelection
                             icon={<IoLanguage className="w-5 h-5"></IoLanguage>}
@@ -152,13 +157,19 @@ export default function TourList() {
                     <GeneralCarousel responsive={responsiveTrendTourList}>
                         {TREND_TOUR.map((tour, key) => (
                             <div key={key}>
-                                <Image src={tour.img} width={216} height={162} className="w-full object-cover rounded-lg" ></Image>
+                                <Image
+                                    src={tour.img}
+                                    width={216}
+                                    height={162}
+                                    className="w-full object-cover rounded-lg"
+                                ></Image>
                                 <div className="mt-2">
-                                    <p className="font-semibold">{tour.destination}</p>
+                                    <p className="font-semibold">
+                                        {tour.destination}
+                                    </p>
                                     <p className="text-gray-400">{tour.city}</p>
                                 </div>
                             </div>
-                            
                         ))}
                     </GeneralCarousel>
                 </div>

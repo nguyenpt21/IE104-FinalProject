@@ -1,41 +1,35 @@
+import { Slider } from "@nextui-org/react";
 import { useState } from "react";
-import ReactSlider from "react-slider";
-
-export default function PriceSlider({ open, handleToggle }) {
-    const [minPrice, setMinPrice] = useState(0);
-    const [maxPrice, setMaxPrice] = useState(10000000);
-
-    const handleSliderChange = (values) => {
-        setMinPrice(values[0]);
-        setMaxPrice(values[1]);
-    };
-
+export default function PriceSlider() {
+    const [value, setValue] = useState([0, 10000000]);
     return (
-        <>
-            {open && (
-                <div className="w-[400px] bg-white p-4 shadow-dropdown rounded-lg">
-                    <div className="flex justify-between mb-2  font-semibold text-gray-800">
-                        <span>{minPrice.toLocaleString("vi-VN")} VND</span>
-                        <span>{maxPrice.toLocaleString("vi-VN")} VND</span>
-                    </div>
-                    <ReactSlider
-                        className="custom-slider"
-                        defaultValue={[0, 10000000]}
-                        min={0}
-                        max={10000000}
-                        step={100000}
-                        onChange={handleSliderChange}
-                    />
-                    <div className="text-right mt-5">
-                        <button
-                            className="px-4 py-2 bg-blue_medium text-white rounded-md"
-                            onClick={handleToggle}
-                        >
-                            Xem kết quả
-                        </button>
-                    </div>
-                </div>
-            )}
-        </>
+        <div>
+            <div className="flex justify-between mb-2 font-semibold text-gray-800">
+                {Array.isArray(value) &&
+                    value.map((b) => (
+                        <span>{b.toLocaleString("vi-VN")} VND</span>
+                    ))}
+            </div>
+            <Slider
+                label=" "
+                step={1}
+                size="sm"
+                maxValue={10000000}
+                minValue={0}
+                defaultValue={[0, 10000000]}
+                showSteps={false}
+                showOutline={true}
+                hideValue={true}
+                value={value}
+                classNames={{
+                    base: "w-full",
+                    filler: "", //màu đường line khoảng chọn
+                    labelWrapper: "mb-2",
+                    track: "bg-gray-200", //màu khoảng ngoài
+                    value: "text-[15px] text-secondary tracking-wider pt-2",
+                }}
+                onChange={setValue}
+            />
+        </div>
     );
 }

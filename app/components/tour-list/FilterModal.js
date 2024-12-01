@@ -10,6 +10,7 @@ import {
 } from "@nextui-org/react";
 import { useState } from "react";
 import { IoFilterSharp } from "react-icons/io5";
+import PriceSlider from "./PriceSlider";
 export default function FilterModal() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const [selectedItems, setSelectedItems] = useState([]);
@@ -66,7 +67,7 @@ export default function FilterModal() {
                 scrollBehavior="inside"
                 size="3xl"
                 className={{
-                    base: "bg-white rounded-lg",
+                    base: "bg-white rounded-lg"
                 }}
                 backdrop="opaque"
             >
@@ -95,10 +96,13 @@ export default function FilterModal() {
                                                     <h3 className="font-semibold">
                                                         {cate.cate}
                                                     </h3>
-                                                    <div className="mt-2 flex flex-wrap gap-2">
+                                                    <div className="mt-2 flex flex-wrap gap-3">
                                                         {cate.list.map(
                                                             (item, key) => (
-                                                                <SelectionItem key={key} item={item}></SelectionItem>
+                                                                <SelectionItem
+                                                                    key={key}
+                                                                    item={item}
+                                                                ></SelectionItem>
                                                             )
                                                         )}
                                                     </div>
@@ -107,10 +111,15 @@ export default function FilterModal() {
                                         )}
                                     </div>
                                 </ModelContentSection>
+                                <ModelContentSection title={"Lọc theo giá"}>
+                                    <div className="mt-4">
+                                        <PriceSlider></PriceSlider>
+                                    </div>
+                                </ModelContentSection>
                             </ModalBody>
                             <ModalFooter>
                                 <button
-                                    className="underline font-semibold"
+                                    className="underline font-semibold mr-auto"
                                     onClick={onClose}
                                 >
                                     Xóa
