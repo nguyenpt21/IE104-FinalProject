@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 import { FaCalendarAlt } from "react-icons/fa";
 
 
-export default function PickDate(props) {
+export default function PickDate() {
     
   const [isFocus, setFocus] = useState(false);
   return (

@@ -8,6 +8,9 @@ import { FLIGHT_POPULAR, PROMO_FLIGHT_CODE } from '@/constants/flight'
 import WhyChooseItem from '@/app/components/flight/WhyChooseItem';
 import { WHY_CHOOSE_FLIGHT } from '@/constants/flight'
 import FlightItem from '@/app/components/flight/FlightItem';
+import ModalReview from '@/app/components/flight/ModalReview';
+import ReviewFlightItem from '@/app/components/flight/ReviewFlightItem';
+import { FLIGHT_REVIEW } from '@/constants/flight'
 
 export default function Flight() {
   const responsive = {
@@ -19,6 +22,30 @@ export default function Flight() {
         items: 3,
     },
   }
+  const responsiveReviewCardList = {
+    desktop: {
+        breakpoint: {
+            max: 3000,
+            min: 1024,
+        },
+        items: 3,
+    },
+    mobile: {
+        breakpoint: {
+            max: 464,
+            min: 0,
+        },
+        items: 1,
+    },
+    tablet: {
+        breakpoint: {
+            max: 1024,
+            min: 464,
+        },
+        items: 1,
+    },
+  };
+
   return (
     <div>
 
@@ -106,6 +133,36 @@ export default function Flight() {
               </div>
           ))}
         </div>
+      </div>
+
+      {/* review */}
+      <div className='container mx-auto my-7'>
+
+        <div className='mb-6'>
+          <p className='text-2xl font-semibold mb-5'>Đánh giá</p>
+
+          <div className='flex items-end py-1'>
+            <p className='text-yellow-500 text-xl px-2'>
+              <span className='text-5xl'>4.7</span>/5
+            </p>
+
+            <div className=''>
+              <p className='text-[18px] font-semibold pb-1'>Hài lòng</p>
+              <p className='text-xs text-secondary pb-1'>4 đánh giá</p>
+            </div>
+          </div>
+        </div>
+        
+        <GeneralCarousel responsive={responsiveReviewCardList}>
+          {FLIGHT_REVIEW.map((review, key) => (
+            <ReviewFlightItem
+              key={key}
+              review={review}
+            ></ReviewFlightItem>
+          ))}
+        </GeneralCarousel>
+        
+        <ModalReview></ModalReview>
       </div>
 
     </div>

@@ -17,7 +17,7 @@ export default function Contact() {
             <Banner />
 
             {/* Thông tin liên hệ */}
-            <div className="container mx-auto my-5">
+            <div className="container mx-auto my-2">
                 <div className="grid grid-cols-3">
                     {CONTACT_INFO.map((row, key) => (
                         <div key={key} className="w-[80%]">
@@ -43,7 +43,7 @@ export default function Contact() {
             {/* Câu hỏi thường gặp */}
             <div className="container mx-auto">
                 <Heading title="Các câu hỏi thường gặp" />
-                <div className="my-2 grid grid-cols-2 gap-2">
+                <div className="my-5 grid grid-cols-2 gap-2">
                     <Accod />
                     <Accod />
                 </div>

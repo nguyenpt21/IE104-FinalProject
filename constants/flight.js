@@ -193,3 +193,44 @@ export const FLIGHT_TICKET = [
     },
     
 ]
+
+export const OPTION_SORT = [
+    "Vagabond giới thiệu",
+    "Giá (thấp đến cao)",
+    "Giá (cao đến thấp)",
+];
+
+export const FLIGHT_REVIEW = [
+    {
+        flight: "VietjetAir: Hà Nội - TP Hồ Chí Minh",
+        reviewer: "Ngô Phương Quyên",
+        reviewTime: "5 ngày trước",
+        score: "5",
+        satisfaction: "Hài lòng",
+        content: "Siêu dễ sử dụng. Vé có thể được cung cấp 1 giờ sau khi đặt vé, đủ để chúng tôi đi từ khách sạn đến sân bay! Cảm ơn vagabond!"
+    },
+    {
+        flight: "BambooAirways: TP Hồ Chí Minh - Đà Lạt",
+        reviewer: "Phạm Trung Nguyên",
+        reviewTime: "2 ngày trước",
+        score: "4.7",
+        satisfaction: "Hài lòng",
+        content: "Đó là lần đầu tiên chúng tôi đi và chúng tôi đã tận hưởng từng khoảnh khắc. Sân bay rất lớn nhưng có chỉ dẫn rất rõ ràng để chỉ cho bạn biết phải đi đâu. Rất nhiều loại thức ăn để bạn không phải lên máy bay trong tình trạng bụng đói."
+    },
+    {
+        flight: "VietjetAir: TP Hồ Chí Minh - Bangkok",
+        reviewer: "Ngô Thị Như Quỳnh",
+        reviewTime: "10 ngày trước",
+        score: "5",
+        satisfaction: "Hài lòng",
+        content: "Rất khuyến khích các bạn nếu bạn muốn đi từ TP HCM đến Thái Lan mà không gặp rắc rối chỉ trong 2 giờ. Có rất nhiều chỗ ngồi ở những nơi được chỉ định trên máy bay. Nếu bạn có một hành lý nhỏ và một hành lý vừa đến lớn, bạn không cần phải đặt chỗ cho hành lý của mình vì có thể mua thêm hành lý."
+    },
+    {
+        flight: "VietjetAir: Hà Nội - TP Hồ Chí Minh",
+        reviewer: "Ngô Phương Quyên",
+        reviewTime: "8 ngày trước",
+        score: "4.6",
+        satisfaction: "Hài lòng",
+        content: "Trải nghiệm tuyệt vời; Máy bay rất sạch sẽ, siêu đúng giờ và rất thoải mái. Nó rất đáng giá và tôi thực sự khuyên bạn nên mua vé trên Vagabond, vì chỉ cần mã QR họ gửi là đủ."
+    },
+]

@@ -113,3 +113,26 @@ body {
         font-size: 14px;
     }
 }
+
+/* date picker */
+.ant-picker-dropdown .ant-picker-header-view >button:hover {
+    color: #27b5fc;
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+    border-color: white;
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-selected:not(.ant-picker-cell-disabled) .ant-picker-cell-inner {
+    background-color: #27b5fc;
+    /* color: aqua; */
+}
+
+.ant-picker-dropdown .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-disabled) .ant-picker-cell-inner {
+    background-color: #27b5fc23;
+    /* color: aqua; */
+}
+
+/* .ant-picker-dropdown .ant-picker-header >button:hover {
+    color: #27b5fc;
+} */

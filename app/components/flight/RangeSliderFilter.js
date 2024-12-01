@@ -16,7 +16,6 @@ export default function RangeSliderFilter() {
             showOutline={true}
             formatOptions={{style: "currency", currency: "VND"}}
             tooltipValueFormatOptions={{style: "currency", currency: "VND"}}
-
             classNames={{
                 base: "max-w-md",
                 filler: "", //màu đường line khoảng chọn

@@ -1,5 +1,7 @@
 import React from 'react';
-import { ClipboardIcon } from '@heroicons/react/24/outline';
+import { MdOutlineContentCopy } from "react-icons/md";
+import { IoCheckmarkDoneSharp } from "react-icons/io5";
+import {Snippet} from "@nextui-org/react";
 
 export default function PromotionCard(props) {
   return (
@@ -14,15 +16,35 @@ export default function PromotionCard(props) {
       {/* Main content */}
       <div className="mb-4  pt-3 px-4">
         <h2 className="text-base font-bold text-gray-800">{props.title}</h2>
-        <p className="text-secondary text-[12px]">
+        <p className="text-secondary text-[14px]">
           {props.desc}
         </p>
       </div>
 
       {/* Code section */}
-      <div className="flex items-center justify-center p-3 border-t-2 border-dashed border-gray-300">
-        <span className="text-blue-600 font-semibold text-base">{props.code}</span>
-        <ClipboardIcon className="w-5 h-5 ml-2 text-primary cursor-pointer" />
+      <div className="flex items-center justify-center p-1 border-t-2 border-dashed border-gray-300">
+        <Snippet
+          symbol = ""
+          timeout={5000} //thời gian chuyển icon
+          copyIcon={<MdOutlineContentCopy />}
+          checkIcon={<IoCheckmarkDoneSharp />}
+          classNames={{
+            base: "bg-inherit",
+            copyButton: "text-blue-600 text-xl"
+          }}
+          tooltipProps={{
+            offset: 3,
+            placement: "bottom",
+            content: "Copy to clipboard", // Add this line to set the tooltip content
+            classNames: {
+              content: "py-2 shadow-xl text-black bg-white text-[12px] rounded-lg border rounded-md",
+            },
+            delay: 0,
+            closeDelay: 0,
+          }}
+        >
+          <span className="text-blue-600 font-semibold text-base">{props.code}</span>
+        </Snippet>
       </div>
     </div>
   );
