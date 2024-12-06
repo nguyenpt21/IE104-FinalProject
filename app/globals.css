@@ -114,7 +114,7 @@ body {
     }
 }
 
-<<<<<<< HEAD
+
 .filter-sidebar {
     background-color: #e0f7fa; 
     border: 1px solid #007bff; 
@@ -228,7 +228,7 @@ body {
     width: 100%;
     z-index: 1000; 
 }
-=======
+
 /* date picker */
 .ant-picker-dropdown .ant-picker-header-view >button:hover {
     color: #27b5fc;
@@ -251,4 +251,4 @@ body {
 /* .ant-picker-dropdown .ant-picker-header >button:hover {
     color: #27b5fc;
 } */
->>>>>>> refs/remotes/origin/main
+
