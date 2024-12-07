@@ -114,10 +114,6 @@ body {
     }
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
 .filter-sidebar {
     background-color: #e0f7fa; 
     border: 1px solid #007bff; 
@@ -213,9 +209,6 @@ body {
 .rating-number {
     font-size: 2.5rem; 
     color: white;
-<<<<<<< HEAD
-}
-=======
     border: none;
     padding: 10px 15px;
     cursor: pointer;
@@ -251,4 +244,3 @@ body {
     color: #27b5fc;
 } */
 
->>>>>>> refs/remotes/origin/main
