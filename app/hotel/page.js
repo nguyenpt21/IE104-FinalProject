@@ -186,6 +186,7 @@ export default function HotelPage() {
                       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
                       </svg>
+                      2 phòng ngủ
                     </span>
                     <span className="mx-1">•</span>
                     <span className="flex items-center gap-1">

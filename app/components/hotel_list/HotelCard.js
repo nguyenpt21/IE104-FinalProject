@@ -3,10 +3,11 @@ import React from "react";
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faGift, faCheck } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 export default function HotelCard(props) {
   return (
-    <div className="border rounded-lg p-4 bg-gray-100 shadow-lg mx-auto my-4 flex" style={{ height: '230px' }}>
+    <Link href="/hotel-details" className="border rounded-lg p-4 bg-gray-100 shadow-lg mx-auto my-4 flex hover:border-blue-500" style={{ height: '230px' }}>
       {/* Image on the left */}
       <Image src={props.image} height={240} width={300} alt={props.name} className="rounded mr-4 object-cover" />
 
@@ -44,13 +45,10 @@ export default function HotelCard(props) {
               <p className="text-orange-600 font-bold line-through text-xs">{props.originalPrice} VND</p>
               <p className="text-orange-600 font-bold text-xs">{props.price} VND</p>
             </div>
-          </div>
-
-          {/* Payment Information Section */}
-          
+          </div>          
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
