@@ -114,6 +114,10 @@ body {
     }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/main
 .filter-sidebar {
     background-color: #e0f7fa; 
     border: 1px solid #007bff; 
@@ -209,4 +213,42 @@ body {
 .rating-number {
     font-size: 2.5rem; 
     color: white;
+<<<<<<< HEAD
 }
+=======
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+/* date picker */
+.ant-picker-dropdown .ant-picker-header-view >button:hover {
+    color: #27b5fc;
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+    border-color: white;
+}
+
+.ant-picker-dropdown .ant-picker-cell-in-view.ant-picker-cell-selected:not(.ant-picker-cell-disabled) .ant-picker-cell-inner {
+    background-color: #27b5fc;
+    /* color: aqua; */
+}
+
+.ant-picker-dropdown .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-disabled) .ant-picker-cell-inner {
+    background-color: #27b5fc23;
+    /* color: aqua; */
+}
+
+/* .ant-picker-dropdown .ant-picker-header >button:hover {
+    color: #27b5fc;
+} */
+
+>>>>>>> refs/remotes/origin/main
