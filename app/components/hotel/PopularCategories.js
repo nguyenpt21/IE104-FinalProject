@@ -8,7 +8,7 @@ const PopularCategories = ({ categories }) => {
       <p className="mb-4 text-md ml-28 mr-80">Tìm kiếm khách sạn, villa hay cottage dễ dàng chỉ với vài bước: nhập địa điểm, chọn loại hình và ngày nhận phòng. Hệ thống nhanh chóng trả về các lựa chọn phù hợp với nhu cầu của bạn.</p>
       <div className="flex justify-around mt-20 mb-20">
         {categories.map((category) => (
-          <div key={category.id} className="aspect-[2.3/4] w-[200px] relative rounded-lg overflow-hidden">
+          <div key={category.id} className="aspect-[2.3/4] w-[200px] relative rounded-lg overflow-hidden hover:translate-y">
             {category.image && (
               <Image
                 src={category.image}
@@ -23,13 +23,13 @@ const PopularCategories = ({ categories }) => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center items-center gap-1.5 mb-20">
+      {/* <div className="flex justify-center items-center gap-1.5 mb-20">
             <div className="w-4 h-2 rounded-full bg-gray-300"></div>
             <div className="w-4 h-2 rounded-full bg-gray-300"></div>
-            <div className="w-8 h-2 rounded-full bg-blue-600"></div> {/* Active indicator */}
+            <div className="w-8 h-2 rounded-full bg-blue-600"></div>
             <div className="w-4 h-2 rounded-full bg-gray-300"></div>
             <div className="w-4 h-2 rounded-full bg-gray-300"></div>
-      </div> 
+      </div>  */}
     </section>
   );
 };

@@ -11,17 +11,17 @@ const RenderModel = ({ children, className }) => {
       shadows={false}
       dpr={[1, 2]}
       camera={{
-        fov: 45, //độ rộng góc nhìn 
+        fov: 63, //độ rộng góc nhìn 
         near: 0.1,
         far: 100,
-        position: [-4, 3, 3], //vị trí x y z trong không gian
+        position: [-4, 3, 4], //vị trí x y z trong không gian
       }}
       // dpr is the device pixel ratio. Here we are setting it to 1 and 2 for retina displays to prevent blurriness in the model rendering on high resolution screens.
     >
       <Suspense fallback={null}>
         <OrbitControls
           autoRotate 
-          autoRotateSpeed={3}
+          autoRotateSpeed={6}
           enableZoom={false}
         />
         {children}

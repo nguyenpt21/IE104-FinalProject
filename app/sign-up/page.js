@@ -2,14 +2,15 @@
 
 import Link from 'next/link'
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa'
+import Image from 'next/image'
 
 export default function SignUp() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[url('/img/login/background.svg')] min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl w-full flex bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Left side - Welcome back section */}
-        <div className="w-1/2 bg-gradient-to-r from-blue-500 to-blue-600 p-12 flex flex-col items-center justify-center text-center transform transition-all duration-500 hover:scale-105">
-          <h2 className="text-3xl font-bold text-white mb-4 transition-all duration-500 hover:-translate-y-1">
+        <div className="bg-[url('/img/login/register.svg')] w-1/2 p-12 flex flex-col items-center justify-center text-center transform transition-all duration-500 hover:scale-105">
+          <h2 className=" text-3xl font-bold text-white mb-4 transition-all duration-500 hover:-translate-y-1">
             Chào mừng trở lại!
           </h2>
           <p className="text-white mb-8 transition-all duration-500">
@@ -25,7 +26,7 @@ export default function SignUp() {
 
         {/* Right side - Sign up form */}
         <div className="w-1/2 p-12 transform transition-all duration-500">
-          <h1 className="text-3xl font-bold text-center mb-8 transition-all duration-500 hover:-translate-y-1">
+          <h1 className="text-3xl font-bold text-center mb-8 transition-all duration-500">
             Tạo tài khoản
           </h1>
           
