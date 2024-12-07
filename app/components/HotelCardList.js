@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { FaStar } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa";
 
 import HomeSection from "./HomeSection";
 import GeneralCarousel from "./GeneralCarousel";
