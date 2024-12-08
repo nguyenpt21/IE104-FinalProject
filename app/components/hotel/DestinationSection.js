@@ -40,7 +40,7 @@ const DestinationSection = () => {
               alt={destination.name} 
               className="w-full h-48 object-cover p-2 rounded-lg shadow-lg"
             />
-            <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-60">
+            <div className="absolute inset-0 flex items-center justify-center rounded-lg">
               <div className="text-white text-xl font-semibold">{destination.name}</div>
             </div>
           </div>

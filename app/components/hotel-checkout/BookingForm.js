@@ -11,7 +11,7 @@ import { Checkbox, TimePicker } from "antd";
 const BookingForm = () => {
     return (
         <>
-            <div className="flex max-w-[1120px] ml-[54px] mx-auto p-6 gap-[20px] mb-0">
+            <div className="flex container mx-auto p-6 gap-[20px] mb-0">
                 <div className="w-2/3">
                     <Paper className="p-6 rounded-lg" elevation={3} style={{ height: '420px' }}>
                         <Typography variant="h6" className="mb-4 font-bold">Thông tin liên hệ (đối với E-voucher)</Typography>

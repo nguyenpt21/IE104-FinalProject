@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const SearchBar = ({ location, setLocation, checkIn, setCheckIn, checkOut, setCheckOut }) => {
   return (
-    <div className="w-full max-w-5xl px-6 mt-2 mb-8 relative z-10">
+    <div className="w-full max-w-5xl mt-2 mb-8 relative z-10">
       <div className="bg-white rounded-lg p-2 grid grid-cols-1 md:grid-cols-4 gap-4 shadow-md">
         <div className="flex items-center gap-2 bg-gray-100 rounded-lg p-3 col-span-1">
           <IoLocationOutline className="text-gray-600 text-xl" />

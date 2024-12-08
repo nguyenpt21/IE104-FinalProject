@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const OverallRating = ({ overallRating, totalReviews, ratingBreakdown, starRatings }) => {
     return (
-        <div className="mb-6 p-4 border rounded-lg bg-white shadow-md max-w-full overflow-hidden">
+        <div className="px-6 container mx-auto">
+            <div className="mb-6 p-4 border rounded-lg bg-white shadow-md overflow-hidden">
             <h2 className="text-2xl font-bold">Đánh giá & Nhận xét chung</h2>
             <p className='text-gray-500'>Từ {totalReviews} đánh giá đã xác minh của khách</p>
             <div className="flex flex-col md:flex-row md:justify-between md:items-center">
@@ -44,6 +45,7 @@ const OverallRating = ({ overallRating, totalReviews, ratingBreakdown, starRatin
                 </div>
             </div>
         </div>
+        </div> 
     );
 };
 

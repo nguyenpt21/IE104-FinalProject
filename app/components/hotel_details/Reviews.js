@@ -7,14 +7,14 @@ const RatingReviews = () => {
         {
             name: "Ngô Thị Như Quỳnh",
             date: "28/09",
-            rating: 5,
+            rating: 10,
             comment: "Điều đầu tiên khiến mình thích nhất với một khách sạn 5 sao là novotel cho mình check in sớm điều rất ít thấy ở khách sạn lớn mặc dù mình không yêu cầu nhận phòng sớm. Giá phòng của mình được giảm giá khuyến mãi nhiều nên không gồm bữa sáng không đánh được bữa sáng, nhưng khi check in được tặng phiếu dùng nước uống miễn phí tại quầy, và phiếu giảm giá massage.",
             avatar: "/img/hotel_details/Demon King.jpg"
         },
         {
             name: "Ngô Thị Như Quỳnh",
             date: "28/09",
-            rating: 5,
+            rating: 8,
             comment: "Lễ tân và nhân viên rất nhiệt tình từ lúc mình check in đến check out đều rất hài lòng về thái độ phục vụ. Phòng đẹp, view đẹp nhiều tiện ích, đệm êm giấc ngủ được đánh giá cao.",
             avatar: "/img/hotel_details/Demon King.jpg"
         }
@@ -50,8 +50,9 @@ const RatingReviews = () => {
     return (
         <div className="p-4">
             <OverallRating overallRating={overallRating} totalReviews={totalReviews} ratingBreakdown={ratingBreakdown} starRatings={starRatings} />
+            <div className="container mx-auto px-6">
             <h2 className="text-2xl font-bold">Xếp hạng và đánh giá</h2>
-            <h3 className="text-xl">{reviews.length > 0 ? reviews[0].rating : 0} / 5</h3>
+            <h3 className="text-xl">{reviews.length > 0 ? reviews[0].rating : 0} / 10</h3>
             {reviews.map((review, index) => (
                 <div key={index} className="flex p-4 mb-4 border rounded-lg bg-white shadow-md transition-transform transform hover:shadow-lg">
                     <div className="flex items-center">
@@ -80,6 +81,8 @@ const RatingReviews = () => {
                 />
                 <button type="submit" className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md">Gửi</button>
             </form>
+            </div>
+           
         </div>
     );
 };

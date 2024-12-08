@@ -6,8 +6,8 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const HotelInfo = () => {
     return (
-        <div className="p-6 bg-white rounded-lg flex ">
-            <div className="flex-1 ml-[50px]">
+        <div className="p-6 bg-white rounded-lg flex container mx-auto">
+            <div className="flex-1">
                 <h1 className="text-2xl font-bold">Khách sạn Quy Nhơn</h1>
                 <div className="flex items-center mt-2">
                     <span className="text-yellow-500">
@@ -54,7 +54,7 @@ const HotelInfo = () => {
                 </ul>
             </div>
             <div className="ml-4">
-                <img src="/img/hotel_details/map.png" alt="Map" className="w-[400px] mr-[40px] rounded-lg" />
+                <img src="/img/hotel_details/map.png" alt="Map" className="w-[400px] rounded-lg" />
                 {/* Add a map component here if needed */}
                 <h2 className="mt-6 text-xl font-semibold">Khám phá khu vực</h2>
                 <ul className="mt-2 text-gray-600">

@@ -13,7 +13,7 @@ const RoomAvailable = () => {
     };
 
     return (
-        <div className="p-6">
+        <div className="p-6 container mx-auto">
             <h1 className="text-2xl font-bold mb-4">Phòng có sẵn</h1>
             <SearchBar 
                 checkInDate={checkInDate} 
@@ -22,7 +22,7 @@ const RoomAvailable = () => {
                 setCheckOutDate={setCheckOutDate} 
                 onSearch={handleSearch} 
             />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 ml-6 mr-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 mx-auto">
                 {/* Room Card 1 */}
                 <div className="bg-white border rounded-lg shadow-md p-4 w-full mx-auto hover:translate-y">
                     <img src="/img/hotel_details/hotel_16.png" alt="Room 1" className="w-full h-40 object-cover rounded-md" />
