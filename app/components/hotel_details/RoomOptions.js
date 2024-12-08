@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar'; 
 import Image from 'next/image';
-import { FaBed, FaUsers, FaRulerCombined } from 'react-icons/fa'; // Import icons
+import { FaBed, FaUsers, FaRulerCombined } from 'react-icons/fa'; 
+import Link from 'next/link';
 
 const RoomAvailable = () => {
     const [checkInDate, setCheckInDate] = useState('');
@@ -38,7 +39,10 @@ const RoomAvailable = () => {
                         <FaBed className="w-4 h-4 mr-1 text-gray-500" />
                         <p className="text-gray-500">1 giường đôi và 1 giường đơn</p>
                     </div>
-                    <button className="mt-4 w-full bg-[#27B5FC] text-white py-2 rounded-md">Đặt phòng</button>
+                    <Link href="/hotel-checkout">
+                        <button className="mt-4 w-full bg-[#27B5FC] text-white py-2 rounded-md hover:bg-[#1A8BC4]">Đặt phòng</button>
+                    </Link>
+                    
                 </div>
 
                 {/* Room Card 2 */}
@@ -57,7 +61,9 @@ const RoomAvailable = () => {
                         <FaBed className="w-4 h-4 mr-1 text-gray-500" />
                         <p className="text-gray-500">1 giường đôi và 1 giường đơn</p>
                     </div>
-                    <button className="mt-4 w-full bg-[#27B5FC] text-white py-2 rounded-md">Đặt phòng</button>
+                    <Link href="/hotel-checkout">
+                        <button className="mt-4 w-full bg-[#27B5FC] text-white py-2 rounded-md hover:bg-[#1A8BC4]">Đặt phòng</button>
+                    </Link>
                 </div>
 
                 {/* Room Card 3 */}
@@ -76,7 +82,9 @@ const RoomAvailable = () => {
                         <FaBed className="w-4 h-4 mr-1 text-gray-500" />
                         <p className="text-gray-500">1 giường đôi và 1 giường đơn</p>
                     </div>
-                    <button className="mt-4 w-full bg-[#27B5FC] text-white py-2 rounded-md">Đặt phòng</button>
+                    <Link href="/hotel-checkout">
+                        <button className="mt-4 w-full bg-[#27B5FC] text-white py-2 rounded-md hover:bg-[#1A8BC4]">Đặt phòng</button>
+                    </Link>
                 </div>
             </div>
         </div>

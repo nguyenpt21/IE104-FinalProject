@@ -382,7 +382,7 @@ export const NAV_LINKS = [
     },
     {
         title: "Vé tham quan",
-        href: "/",
+        href: "/tour",
         services: [
             "Công viên giải trí",
             "Công viên nước",

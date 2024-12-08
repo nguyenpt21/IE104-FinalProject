@@ -5,7 +5,7 @@ import { TbCategory } from "react-icons/tb";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { IoPricetagsOutline } from "react-icons/io5";
 import { IoLanguage } from "react-icons/io5";
-import DateRangePicker from "../components/tour-list/DateRangePicker";
+import DateRangePickerDropdown from "../components/tour-list/DateRangePickerDropdown";
 import FilterSelection from "../components/tour-list/FilterSelection";
 import CateSelectionDropdown from "../components/tour-list/CateSelectionDropdown";
 import LangSelectionDropdown from "../components/tour-list/LangSelectionDropdown";
@@ -105,7 +105,7 @@ export default function TourList() {
                                 <FaRegCalendarAlt className="w-5 h-5"></FaRegCalendarAlt>
                             }
                             text={"Ngày khả dụng"}
-                            dropdown={<DateRangePicker></DateRangePicker>}
+                            dropdown={<DateRangePickerDropdown></DateRangePickerDropdown>}
                         ></FilterSelection>
                         <FilterSelection
                             icon={

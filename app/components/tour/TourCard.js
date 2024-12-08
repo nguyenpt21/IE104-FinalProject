@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa6";
 
 export default function TourCard({card}) {
     return (
-        <Link href="/" className="flex-1">
+        <Link href="/tour-detail" className="flex-1">
             <div className="rounded-lg overflow-hidden border flex flex-col translate-y bg-white h-[264px]">
                 <div className="h-[150px]">
                     <Image
