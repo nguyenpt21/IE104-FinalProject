@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import SearchBar from "../components/hotel_list/SearchBar";
-import CheckBoxFilter from "../components/hotel_list/CheckBoxFilter";
-import PriceFilter from "../components/hotel_list/PriceFilter";
-import RangeSliderFilter from "../components/hotel_list/RangeSliderFilter";
+import SearchBar from "../components/hotel-list/SearchBar";
+import CheckBoxFilter from "../components/hotel-list/CheckBoxFilter";
+import PriceFilter from "../components/hotel-list/PriceFilter";
+import RangeSliderFilter from "../components/hotel-list/RangeSliderFilter";
 import { HOTEL_FILTER_POPULAR, HOTEL_CARD, HOTEL_FILTER_ACTIVITY, HOTEL_FILTER_STAR, HOTEL_FILTER_ACCOMMODATION } from '@/constants/hotel';
-import HotelCard from "../components/hotel_list/HotelCard";
+import HotelCard from "../components/hotel-list/HotelCard";
 
 export default function HotelList() {
     const [searchTerm, setSearchTerm] = useState("");
