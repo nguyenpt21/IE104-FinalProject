@@ -13,7 +13,7 @@ export default function GetInTouch() {
 
         <div className='py-5'>
             <div className='relative'>
-                <div className='flex absolute z-50 bg-white rounded-2xl p-1 top-3 left-[23%]'>
+                <div className='flex absolute z-10 bg-white rounded-2xl p-1 top-3 left-[23%]'>
                     <Image
                         src="/icons/message-circle.svg"
                         height={14}

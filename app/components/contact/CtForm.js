@@ -7,7 +7,7 @@ import CtButton from '@/app/components/contact/CtButton'
 export default function ContactForm() {
   return (
     <div>
-        <form className='space-y-5 m-10 shadow-custom p-6 rounded-lg'>
+        <form className='space-y-5 my-10 shadow-custom p-6 rounded-lg'>
             <div className='grid grid-cols-2 gap-5'>
                 <ContactInput
                     type = "text"

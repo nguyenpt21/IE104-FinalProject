@@ -44,7 +44,7 @@ export default function Navbar() {
                 <NavItem
                     key={key}
                     href={nav.href}
-                    Dropdown={<Dropdown data={nav.services}></Dropdown>}
+                    Dropdown={<Dropdown data={nav.services} href={nav.href}></Dropdown>}
                 >
                     {nav.title}
                 </NavItem>

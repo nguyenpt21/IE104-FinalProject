@@ -36,7 +36,7 @@ export default function ActivityCardList() {
 
     function ActivityCard({ card }) {
         return (
-            <Link href="/">
+            <Link href="/tour-detail">
                 <div className="rounded-xl border h-[380px] flex flex-col shadow-md overflow-hidden">
                     <div className="h-[200px] relative ">
                         <Image
