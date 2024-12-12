@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody } from "@nextui-org/react";
 import { IoClose } from "react-icons/io5";
 import { FLIGHT_REVIEW } from '@/constants/flight';
 import ReviewFlightItem from '@/app/components/flight/ReviewFlightItem';
@@ -24,7 +24,7 @@ export default function ModalReview() {
         size='xl'
         classNames={{
           wrapper: "items-center justify-end m-0",
-          base: "sm:mx-0 sm:my-0 rounded-none ",
+          base: "sm:mx-0 sm:my-0 rounded-none",
         }}
       >
         <ModalContent className="m-0 bg-white">
@@ -48,10 +48,7 @@ export default function ModalReview() {
               ></ReviewFlightItem>
             ))}
           </ModalBody>
-
-          <ModalFooter>
           
-          </ModalFooter>
         </ModalContent>
       </Modal>
     </div>
