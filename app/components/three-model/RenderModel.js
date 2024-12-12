@@ -16,13 +16,14 @@ const RenderModel = ({ children, className }) => {
         far: 100,
         position: [-4, 3, 4], //vị trí x y z trong không gian
       }}
-      // dpr is the device pixel ratio. Here we are setting it to 1 and 2 for retina displays to prevent blurriness in the model rendering on high resolution screens.
     >
       <Suspense fallback={null}>
         <OrbitControls
           autoRotate 
           autoRotateSpeed={6}
           enableZoom={false}
+          //minPolarAngle={Math.PI / 2} 
+          //maxPolarAngle={Math.PI / 2} 
         />
         {children}
       </Suspense>

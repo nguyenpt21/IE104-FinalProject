@@ -144,6 +144,7 @@ export default function ListFlight() {
                                     startLoca = {row.startLoca}
                                     endLoca = {row.endLoca}
                                     price = {row.price}
+                                    priceWithLuggage = {row.priceWithLuggage}
                                     day = {row.day}
                                     period = {row.period}
                                 />
