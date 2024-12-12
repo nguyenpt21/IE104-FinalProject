@@ -26,7 +26,7 @@ const RoomAvailable = () => {
                 {/* Room Card 1 */}
                 <div className="bg-white border rounded-lg shadow-md p-4 w-full mx-auto hover:translate-y">
                     <img src="/img/hotel_details/hotel_16.png" alt="Room 1" className="w-full h-40 object-cover rounded-md" />
-                    <h2 className="text-lg font-semibold mt-2">Giường đôi tiêu chuẩn, nhiều giường</h2>
+                    <h2 className="text-lg font-semibold mt-2">Phòng đôi tiêu chuẩn, nhiều giường</h2>
                     <div className="flex items-center mt-2">
                         <FaRulerCombined className="w-4 h-4 mr-1 text-gray-500" />
                         <p className="text-gray-500">214m²</p>
@@ -48,7 +48,7 @@ const RoomAvailable = () => {
                 {/* Room Card 2 */}
                 <div className="bg-white border rounded-lg shadow-md p-4 w-full mx-auto hover:translate-y">
                     <img src="/img/hotel_details/hotel_17.png" alt="Room 2" className="w-full h-40 object-cover rounded-md" />
-                    <h2 className="text-lg font-semibold mt-2">Giường đôi tiêu chuẩn, nhiều giường</h2>
+                    <h2 className="text-lg font-semibold mt-2">Phòng đôi tiêu chuẩn, nhiều giường</h2>
                     <div className="flex items-center mt-2">
                         <FaRulerCombined className="w-4 h-4 mr-1 text-gray-500" />
                         <p className="text-gray-500">24m²</p>
