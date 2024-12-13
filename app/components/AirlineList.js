@@ -24,7 +24,7 @@ export default function AirlineList() {
                 ))}
             </div>
             <div className="text-center mt-6">
-                <SectionButton href="/" text={"Đặt vé máy bay ngay"}></SectionButton>
+                <SectionButton href="/flight" text={"Đặt vé máy bay ngay"}></SectionButton>
             </div>
         </HomeSection>
     );

@@ -4,8 +4,8 @@ import { Button, Paper, Typography } from '@mui/material';
 
 const AdditionalServicesInfo = () => {
     return (
-        <div className="flex container mx-auto p-6">
-            <Paper className="w-2/3 p-6 rounded-lg" elevation={3}>
+        <div className="">
+            <Paper className="mt-[45px] p-6 rounded-lg" elevation={3}>
                 <Typography variant="h6" className="mb-1 font-bold">Chi tiết giá</Typography>
                 <Typography variant="body2" className="mb-4 text-green-500 font-bold">Hãy áp thêm mã giảm giá tại trang thanh toán để có giá tốt hơn nhé</Typography>
                 <div className="flex justify-between">

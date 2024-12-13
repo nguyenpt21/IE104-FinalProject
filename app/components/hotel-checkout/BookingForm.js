@@ -6,6 +6,8 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { TextField, MenuItem, Typography, Paper, Radio, RadioGroup, FormControlLabel, Box } from '@mui/material';
 import HotelDetails from './HotelDetails'; 
 import { Checkbox, TimePicker } from "antd";
+import Price from './Price'; 
+import { Button} from '@mui/material';
 
 
 const BookingForm = () => {
@@ -48,8 +50,8 @@ const BookingForm = () => {
                         
                     </Paper>
                     <Paper className="mt-[45px] p-6 rounded-lg" elevation={3}>
-                <Typography variant="h6" className="mb-4 font-bold">Bạn có yêu cầu nào không?</Typography>
-                <Typography variant="body2" className="mb-4">Khi nhận phòng, khách sạn sẽ thông báo liệu yêu cầu này có được đáp ứng hay không. Một số yêu cầu cần trả thêm phí để sử dụng nhưng bạn hoàn toàn có thể hủy yêu cầu sau đó.</Typography>
+                    <Typography variant="h6" className="mb-4 font-bold">Bạn có yêu cầu nào không?</Typography>
+                    <Typography variant="body2" className="mb-4">Khi nhận phòng, khách sạn sẽ thông báo liệu yêu cầu này có được đáp ứng hay không. Một số yêu cầu cần trả thêm phí để sử dụng nhưng bạn hoàn toàn có thể hủy yêu cầu sau đó.</Typography>
                 
                 <div className="grid grid-cols-2 gap-4 ml-[10px]">
                     <FormControlLabel control={<Checkbox className='mr-[10px]' />} label="Phòng không hút thuốc" />
@@ -60,6 +62,7 @@ const BookingForm = () => {
                     <FormControlLabel control={<Checkbox className='mr-[10px]'/>} label="Khác" />
                 </div>
                 </Paper>
+                <Price />
                 </div>
                 <HotelDetails />
             </div>
