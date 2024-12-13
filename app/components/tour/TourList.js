@@ -7,7 +7,7 @@ export default function TourList({ className, Header, Content }) {
         <div className={`w-full p-5 rounded-2xl ${className}`}>
             <div className="flex justify-between items-center">
                 {Header}
-                <Link href="/">
+                <Link href="/tour-list">
                     <div className="flex gap-1 items-center">
                         <p className="text-base underline font-semibold">Xem tất cả</p>
                         <MdOutlineArrowForwardIos className="w-4 h-4"></MdOutlineArrowForwardIos>
@@ -20,3 +20,4 @@ export default function TourList({ className, Header, Content }) {
         </div>
     );
 }
+

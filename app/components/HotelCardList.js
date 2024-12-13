@@ -45,7 +45,7 @@ export default function HotelCardList() {
         console.log(discountPercentage)
 
         return (
-            <Link href="/">
+            <Link href="/hotel-details">
                 <div className="rounded-xl border h-[350px] flex flex-col shadow-md">
                     <div className="h-[200px] rounded rounded-t-xl relative">
                         <Image
@@ -110,7 +110,7 @@ export default function HotelCardList() {
                 ))}
             </GeneralCarousel>
             <div className="text-center mt-6">
-                <SectionButton href={"/"} text="Đặt khách sạn ngay"></SectionButton>
+                <SectionButton href={"/hotel"} text="Đặt khách sạn ngay"></SectionButton>
             </div>
         </HomeSection>
     );

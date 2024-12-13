@@ -38,7 +38,7 @@ export default function ActivityCardList() {
         return (
             <Link href="/tour-detail">
                 <div className="rounded-xl border h-[380px] flex flex-col shadow-md overflow-hidden">
-                    <div className="h-[200px] relative ">
+                    <div className="h-[200px] relative flex-1">
                         <Image
                             src={card.img}
                             width={280}
@@ -114,7 +114,7 @@ export default function ActivityCardList() {
                 ))}
             </GeneralCarousel>
             <div className="text-center mt-6">
-                <SectionButton href={"/"} text="Xem tất cả"></SectionButton>
+                <SectionButton href={"/tour"} text="Xem tất cả"></SectionButton>
             </div>
         </HomeSection>
     );

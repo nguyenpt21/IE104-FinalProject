@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function ReviewFlightItem({review}) {
   return (
-    <div className='rounded-md border border-gray-300 p-6'>
+    <div className='rounded-md border border-gray-300 p-6 h-full'>
         {/* ten */}
         <p className='text-base font-semibold '>
             {review.reviewer}
