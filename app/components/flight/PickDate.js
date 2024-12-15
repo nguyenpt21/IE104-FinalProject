@@ -9,6 +9,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 export default function PickDate() {
     
   const [isFocus, setFocus] = useState(false);
+  
   return (
     <div>
         <DatePicker

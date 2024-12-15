@@ -5,13 +5,9 @@ import React, { useState } from 'react'
 export default function TimeFilterItem(props) {
   const [selected, setSelected] = useState(false);
 
-  const handleClick = () => {
-    setSelected(!selected); // Đổi trạng thái khi click
-  };
-
   return (
     <button
-      onClick={handleClick}
+      onClick={() => setSelected(!selected)}
       className={`text-center rounded-md border-[1.5px] py-2 w-full 
         duration-300 group  hover:bg-primary 
         ${selected ? 'bg-primary border-primary text-white' : 'border-gray-300'}

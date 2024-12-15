@@ -12,7 +12,7 @@ export default function About() {
         <div>
             <ScrollRevealEffect />
 
-            {/* section 1 */}
+            {/* banner */}
             <div className="my-10">
                 <Heading title="Về chúng tôi" />
             </div>
@@ -57,9 +57,10 @@ export default function About() {
                 </div>
             </div>
 
-            {/* section 2 */}
+            {/* about us */}
             <div className="container mx-auto grid grid-cols-three_col_custom">
                 <div className="mx-auto flex flex-col w-96">
+
                     <div className="px-5 mb-16 left-element">
                         <p className="text-2xl font-bold py-5">
                             {ABOUT.text[0].title}
@@ -118,15 +119,15 @@ export default function About() {
                 </div>
             </div>
             
-            {/* section 3 */}
+            {/* Team  */}
             <div className="my-10">
                 <Heading title="Team & Founder" />
             </div>
             
-            <div className="container mx-auto mt-24 mb-10">
+            <div className="container mx-auto mt-24">
                 <div className="grid grid-cols-3">
                     {TEAM.map((row, key) => (
-                        <div key={key} className="flex items-center justify-center">
+                        <div key={key} className="flex items-center justify-center mb-16">
                             <ProfileCard
                                 img={row.img}
                                 name={row.name}

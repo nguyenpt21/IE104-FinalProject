@@ -194,7 +194,7 @@ export default function FlightTicket(props) {
                         <p className="font-bold text-[20px] ">Chọn loại vé của bạn</p>
                       </div>
 
-                      <div className="grid grid-cols-2">
+                      <div className="grid grid-cols-2 gap-2">
                         <TypeTicket
                           type = "Nguyên bản"
                           price = {props.price}
@@ -207,7 +207,7 @@ export default function FlightTicket(props) {
                           price = {props.priceWithLuggage}
                           base = "Hành lý xách tay 7 kg"
                           luggagePlus = "Hành lý ký gửi 1 x 20 kg"
-                        />
+                        />          
                       </div>
                     </ModalBody>
                     

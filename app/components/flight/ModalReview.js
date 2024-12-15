@@ -23,8 +23,8 @@ export default function ModalReview() {
         placement="top"
         size='xl'
         classNames={{
-          wrapper: "items-center justify-end m-0",
-          base: "sm:mx-0 sm:my-0 rounded-none",
+          wrapper: "items-center justify-end m-0", 
+          base: "sm:mx-0 sm:my-0 rounded-none ", //bao toàn modal
         }}
       >
         <ModalContent className="m-0 bg-white">

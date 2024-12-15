@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-
 import Banner from "@/app/components/contact/Banner";
 import Link from "next/link";
 import { CONTACT_INFO } from "@/constants/contact";
@@ -17,10 +16,10 @@ export default function Contact() {
             <Banner />
 
             {/* Thông tin liên hệ */}
-            <div className="container mx-auto my-2">
+            <div className="container mx-auto">
                 <div className="grid grid-cols-3">
                     {CONTACT_INFO.map((row, key) => (
-                        <div key={key} className="w-[80%]">
+                        <div key={key} className="w-[80%] my-2">
                             <ContactItem
                                 icon={row.icon}
                                 title={row.title}

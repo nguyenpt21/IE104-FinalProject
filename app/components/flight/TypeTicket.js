@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function TypeTicket(props) {
   return (
-    <div className='border border-gray-300 rounded-md text-gray-400 p-3 w-fit text-[12px]'>
+    <div className='border border-gray-300 rounded-md text-gray-400 p-3 w-full text-[12px]'>
         <div className='border-b border-gray-300 pb-2'>
             <div className='flex justify-end gap-5 font-medium text-base pb-5'>
                 <span className='flex-1 text-black '>{props.type}</span>

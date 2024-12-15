@@ -10,7 +10,6 @@ export default function SearchFlight() {
 
   const [from, setFrom] = useState("Hà Nội");
   const [to, setTo] = useState("Hồ Chí Minh");
-  const [isFocus, setFocus] = useState(false);
   
   return (
     <div className='flex gap-4'>
@@ -74,7 +73,7 @@ export default function SearchFlight() {
                     Ngày khởi hành
                 </label>
             </div>
-            <PickDate text="Chọn ngày khởi hành" />
+            <PickDate />
         </div>
 
         {/* Button */}

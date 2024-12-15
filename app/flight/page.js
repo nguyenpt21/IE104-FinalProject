@@ -22,33 +22,9 @@ export default function Flight() {
         items: 3,
     },
   }
-  const responsiveReviewCardList = {
-    desktop: {
-        breakpoint: {
-            max: 3000,
-            min: 1024,
-        },
-        items: 3,
-    },
-    mobile: {
-        breakpoint: {
-            max: 464,
-            min: 0,
-        },
-        items: 1,
-    },
-    tablet: {
-        breakpoint: {
-            max: 1024,
-            min: 464,
-        },
-        items: 1,
-    },
-  };
-
+  
   return (
     <div>
-
       {/* search flight */}
       <div className=' relative h-[400px]'>
         <Image
@@ -91,11 +67,11 @@ export default function Flight() {
           height={100}
           alt=''
         />
-
       </div>
 
       {/* mã giảm giá */}
       <div className='container mx-auto my-12'>
+
         <div className='text-2xl font-semibold  mb-6'>
           <p>Đi chơi thả ga không lo về giá</p>
         </div>
@@ -122,6 +98,7 @@ export default function Flight() {
         <div className='text-2xl font-semibold  mb-6'>
           <p>Các tuyến phổ biến</p>
         </div>
+        
         <div className='grid grid-cols-4 gap-5'>
           {FLIGHT_POPULAR.map((item, key) => (
               <div key={key}>
@@ -153,7 +130,7 @@ export default function Flight() {
           </div>
         </div>
         
-        <GeneralCarousel responsive={responsiveReviewCardList}>
+        <GeneralCarousel responsive={responsive}>
           {FLIGHT_REVIEW.map((review, key) => (
             <ReviewFlightItem
               key={key}

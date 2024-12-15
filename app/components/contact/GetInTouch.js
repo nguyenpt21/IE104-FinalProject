@@ -6,14 +6,16 @@ export default function GetInTouch() {
   return (
     <div>
         <p className='text-xl text-sky-500'>{GET_IN_TOUCH.sub_title}</p>
+
         <p className='text-4xl font-bold py-7'>{GET_IN_TOUCH.title}</p>
+
         <p className='text-gray-400 text-base'>
             {GET_IN_TOUCH.desc}
         </p>
 
         <div className='py-5'>
             <div className='relative'>
-                <div className='flex absolute z-10 bg-white rounded-2xl p-1 top-3 left-[23%]'>
+                <div className='flex absolute z-[5] bg-white rounded-2xl p-1 top-3 left-[23%]'>
                     <Image
                         src="/icons/message-circle.svg"
                         height={14}

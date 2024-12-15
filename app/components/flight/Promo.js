@@ -15,7 +15,7 @@ export default function PromotionCard(props) {
 
       {/* Main content */}
       <div className="mb-4  pt-3 px-4">
-        <h2 className="text-base font-bold text-gray-800">{props.title}</h2>
+        <p className="text-base font-bold text-gray-800">{props.title}</p>
         <p className="text-secondary text-[14px]">
           {props.desc}
         </p>
